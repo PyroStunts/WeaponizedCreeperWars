@@ -69,4 +69,4 @@ resource-pack-sha1=
 max-world-size=29999984
 ```
 #### Discord
-Check out the [WCW discord server](https://discord.gg/B6zG4Y26uD) if you want to get discuss the datapack or server.
+Check out the [WCW discord server](https://discord.gg/B6zG4Y26uD) if you want to discuss the datapack or server.
