@@ -7,14 +7,14 @@ Some of the commands used in this datapack were created on my Minecraft Command 
 
 I have a website that explains the game here http://wcw.mcstacker.net 
 
-###### Getting Started
+#### Getting Started
 1. Setup a Vanilla Server with a Void world
 2. Put the datapack in the datapacks folder
 3. Run the `/reload` command (You need to be the operator)
 4. Run `/function wc:setup` once only to setup the game for this world.
 
 
-###### Suggested server.properties
+#### Suggested server.properties
 Some of the things in this file are unnecessary, But I thought I'd share it anyway. 
 ```
 enable-jmx-monitoring=false
@@ -68,5 +68,5 @@ spawn-protection=1
 resource-pack-sha1=
 max-world-size=29999984
 ```
-
-```
+#### Discord
+Check out the [WCW discord server](https://discord.gg/B6zG4Y26uD) if you want to get discuss the datapack or server.
