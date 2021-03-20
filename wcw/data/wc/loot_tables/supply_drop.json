@@ -1,0 +1,700 @@
+{
+	"pools":[
+	   {
+		  "rolls":3,
+		  "entries":[
+			 {
+				"type":"item",
+				"weight":7,
+				"name":"minecraft:creeper_spawn_egg",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":{
+						 "min":1,
+						 "max":3
+					  }
+				   },
+				   {
+					  "function":"set_nbt",
+					  "tag":"{EntityTag:{Invulnerable:1b,Tags:[\"lob_creeper\"]}}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Grenade",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"You control the arc of the throw by where you're looking.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"More than 45 degrees (towards your feet) will throw the",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"granade with a high arc. Less than 45 Degrees will result ",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"in a more direct throw. Explodes on impact.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Explosion Radius 5.",
+							"color":"red","italic":false
+							
+						 }
+					  ]
+				   }
+				]
+			 },
+
+			 {
+				"type":"item",
+				"weight":2,
+				"name":"minecraft:blaze_spawn_egg",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":1
+				   },
+				   {
+					  "function":"set_nbt",
+					  "tag":"{EntityTag:{id:\"minecraft:creeper\",Invulnerable:1b,Fuse:100,Tags:[\"pummel_creeper\"],Attributes:[{Name:generic.follow_range,Base:1}]}}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Pummeler",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"This creeper pummels the ground it",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"stands on until there is nothing left.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"You should move away from this Creeper ",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"immediately after you've placed it. ",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Explosion Radius 4.",
+							"color":"red","italic":false
+						 }
+					  ]
+				   }
+				]
+			 },
+			 {
+				"type":"item",
+				"weight":2,
+				"name":"minecraft:parrot_spawn_egg",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":{
+						  "min":1,
+						  "max":2
+					  }
+				   },
+				   {
+					  "function":"set_nbt",
+					  "tag":"{EntityTag:{Silent:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:200,ShowParticles:0b}]}}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Launch Rocket",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Launch a Creeper Rocket.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Flies upwards and explodes after 4 seconds.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Explosion Radius 5.",
+							"color":"red","italic":false
+						 }
+					  ]
+				   }
+				]
+			 },
+			 {
+				"type":"item",
+				"weight":2,
+				"name":"minecraft:drowned_spawn_egg",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":{
+						 "min":1,
+						 "max":2
+					  }
+				   },
+				   {
+					  "function":"set_nbt",
+					  "tag":"{EntityTag:{id:\"minecraft:creeper\",Fuse:100,ignited:0b,Tags:[\"creeper_bomb\"],Attributes:[{Name:generic.follow_range,Base:1}]}}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Creeper Bomb",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Use this to place a Creeper Bomb.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"You should move away from this Creeper",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"immediately after you've placed it.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Once the Creeper is glowing blue, It will ",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"explode immediately when a player goes near",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"it. Try to place the creeper where your",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"opponent won't see it. This Creeper can be",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"detonated with a Detonator Arrow.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Explosion Radius 6.",
+							"color":"red","italic":false
+						 }				 
+					  ]
+				   }
+				]
+			 },
+			 {
+				"type":"item",
+				"weight":1,
+				"name":"minecraft:tropical_fish_spawn_egg",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":1
+				   },
+				   {
+					  "function":"set_nbt",
+					  "tag":"{EntityTag:{id:\"minecraft:creeper\",ExplosionRadius:6b,Invulnerable:1b,NoAI:1b,Tags:[\"chaser\"],Attributes:[{Name:generic.movement_speed,Base:0.50},{Name:generic.follow_range,Base:40}]}}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Chaser Creeper",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Use this to place a Chaser Creeper.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"You should move away from this Creeper",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"immediately after you've placed it.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"After 5 seconds it will chase a player ",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"but it might chase you. It can move fast",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"and it's invincible.  This Creeper can be",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"detonated with a Detonator Arrow.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Explosion Radius 6.",
+							"color":"red","italic":false
+						 }				 
+					  ]
+				   }
+				]
+			 }
+		  ]
+	   },
+	   {
+		  "rolls":1,
+		  "entries":[
+			{
+				"type":"item",
+				"weight":3,
+				"name":"minecraft:wolf_spawn_egg",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":1
+				   },
+				   {
+					  "function":"set_nbt",
+					  "tag":"{EntityTag:{Silent:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:200,ShowParticles:0b}]}}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Reveal",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Makes all players glow for 10 seconds",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"when placed.",
+							"color":"white","italic":false
+						 }
+					  ]
+				   }
+				]
+			 },
+			 {
+				"type":"item",
+				"weight":2,
+				"name":"minecraft:egg",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":1
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Slime Safety Platform",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Look down and throw the egg when you are ",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"falling to deploy the slime safety platform.",
+							"color":"white","italic":false
+						 }
+					  ]
+				   }
+				]
+			 },
+			 {
+				"type":"item",
+				"weight":3,
+				"name":"minecraft:snowball",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":1
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Projectile Shield",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Throw to create a glass sheild to block ",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"incomming projectiles.",
+							"color":"white","italic":false
+						 }
+					  ]
+				   }
+				]
+			 },
+			 {
+				"type":"item",
+				"weight":1,
+				"name":"minecraft:trident",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":1
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Jail Trap",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Throw to set a jail trap. Players who go within 5 blocks of the",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"trap will be imprisoned with 10 seconds of mining fatigue.",
+							"color":"white","italic":false
+						 }
+					  ]
+				   }
+				]
+			 },
+			 {
+				"type":"item",
+				"weight":1,
+				"name":"minecraft:ender_pearl",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":1
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Teleport Orb",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Throw it to Teleport Somewhere.",
+							"color":"white","italic":false
+						 }
+					  ]
+				   }
+				]
+			 }
+		  ]
+	   },
+	   {
+		   "rolls":2,
+		   "entries":[
+			{
+				"type":"item",
+				"weight":2,
+				"name":"minecraft:tipped_arrow",
+				"functions":[
+				   {
+					  "function":"set_count",
+					  "count":{
+						 "min":1,
+						 "max":6
+					  }
+				   },
+				   {
+					  "function":"set_nbt",
+					  "tag":"{HideFlags:32,Potion:\"minecraft:strength\"}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Creeper Arrow",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Summons a Creeper on impact with a block.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Can be used to detonate the Creeper Bomb",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Explosion Radius 2.",
+							"color":"red","italic":false
+						 }
+					  ]
+				   }
+				]
+			 },
+				{
+					"type":"item",
+					"weight":1,
+					"name":"minecraft:tipped_arrow",
+					"functions":[
+					   {
+						  "function":"set_count",
+						  "count":1
+					   },
+					   {
+						  "function":"set_nbt",
+						  "tag":"{HideFlags:32,Potion:\"minecraft:leaping\"}"
+					   },
+					   {
+						  "function":"set_name",
+						  "name":[
+							 {
+								"text":"Air Strike Arrow",
+								"color":"green","italic":false
+							 }
+						  ]
+					   },
+					   {
+						  "function":"set_lore",
+						  "lore":[
+							 {
+								"text":"Summons Bomber Bats which drop",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"several Creeper bombs in the area.",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"Explosion Radius 5.",
+								"color":"red","italic":false
+							 }
+						  ]
+					   }
+					]
+				 },
+				 {
+					"type":"item",
+					"weight":1,
+					"name":"minecraft:tipped_arrow",
+					"functions":[
+					   {
+						  "function":"set_count",
+						  "count":1
+					   },
+					   {
+						  "function":"set_nbt",
+						  "tag":"{HideFlags:32,Potion:\"minecraft:fire_resistance\"}"
+					   },
+					   {
+						  "function":"set_name",
+						  "name":[
+							 {
+								"text":"Pummeler Arrow",
+								"color":"green","italic":false
+							 }
+						  ]
+					   },
+					   {
+						  "function":"set_lore",
+						  "lore":[
+							 {
+								"text":"Summons a Pummeler on impact with a block.",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"Explosion Radius 4.",
+								"color":"red","italic":false
+							 }
+						  ]
+					   }
+					]
+				 },
+				 {
+					"type":"item",
+					"weight":1,
+					"name":"minecraft:tipped_arrow",
+					"functions":[
+					   {
+						  "function":"set_count",
+						  "count":1
+					   },
+					   {
+						  "function":"set_nbt",
+						  "tag":"{HideFlags:32,Potion:\"minecraft:swiftness\"}"
+					   },
+					   {
+						  "function":"set_name",
+						  "name":[
+							 {
+								"text":"Chaser Creeper Arrow",
+								"color":"green","italic":false
+							 }
+						  ]
+					   },
+					   {
+						  "function":"set_lore",
+						  "lore":[
+							 {
+								"text":"Summons a Chaser Creeper on impact with a block.",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"Explosion Radius 6.",
+								"color":"red","italic":false
+							 }
+						  ]
+					   }
+					]
+				 },
+				 {
+					"type":"item",
+					"weight":2,
+					"name":"minecraft:tipped_arrow",
+					"functions":[
+					   {
+						  "function":"set_count",
+						  "count":{
+							 "min":1,
+							 "max":3
+						  }
+					   },
+					   {
+						  "function":"set_nbt",
+						  "tag":"{HideFlags:32,Potion:\"minecraft:regeneration\"}"
+					   },
+					   {
+						  "function":"set_name",
+						  "name":[
+							 {
+								"text":"Creeper Bomb Arrow",
+								"color":"green","italic":false
+							 }
+						  ]
+					   },
+					   {
+						  "function":"set_lore",
+						  "lore":[
+							 {
+								"text":"Summons a Creeper Bomb on impact with a block.",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"Explosion Radius 6.",
+								"color":"red","italic":false
+							 }
+						  ]
+					   }
+					]
+				 },
+				 {
+					"type":"item",
+					"weight":2,
+					"name":"minecraft:tipped_arrow",
+					"functions":[
+					   {
+						  "function":"set_count",
+						  "count":{
+							 "min":1,
+							 "max":3
+						  }
+					   },
+					   {
+						  "function":"set_nbt",
+						  "tag":"{HideFlags:32,Potion:\"minecraft:night_vision\"}"
+					   },
+					   {
+						  "function":"set_name",
+						  "name":[
+							 {
+								"text":"Rocket Creeper Arrow",
+								"color":"green","italic":false
+							 }
+						  ]
+					   },
+					   {
+						  "function":"set_lore",
+						  "lore":[
+							 {
+								"text":"Summons a Rocket Creeper on impact with a block.",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"Explosion Radius 4.",
+								"color":"red","italic":false
+							 }
+						  ]
+					   }
+					]
+				 }
+			]
+		}
+	]
+ }
+
