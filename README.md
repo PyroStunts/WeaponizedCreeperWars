@@ -5,7 +5,7 @@ Here is the datapack that my Minecraft mini-game server at wcw.mcstacker.net is 
 
 Some of the commands used in this datapack were created on my Minecraft Command Generator at https://mcstacker.net .
 
-I have a website that explains the game here https://wcw.mcstacker.net 
+I have a website that explains the game here http://wcw.mcstacker.net 
 
 ###### Getting Started
 1. Setup a Vanilla Server with a Void world
