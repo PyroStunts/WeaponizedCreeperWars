@@ -15,6 +15,7 @@ I have a website that explains the game here http://wcw.mcstacker.net
 
 
 ###### Suggested server.properties
+Some of the things in this file are unnecessary, But I thought I'd share it anyway. 
 ```
 enable-jmx-monitoring=false
 rcon.port=25575
