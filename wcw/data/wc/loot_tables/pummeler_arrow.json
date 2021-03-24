@@ -1,0 +1,42 @@
+{
+	"pools":[
+		{
+			"rolls": 1,
+			"entries":[
+				{
+					"type":"item",
+					"name":"minecraft:tipped_arrow",
+					"functions":[
+					   {
+						  "function":"set_nbt",
+						  "tag":"{CustomPotionEffects:[{Id:3b,Amplifier:3b,Duration:2}],HideFlags:32,CustomPotionColor:16495873,CustomModelData:3}"
+					   },
+					   {
+						  "function":"set_name",
+						  "name":[
+							 {
+								"text":"Pummeler Arrow",
+								"color":"green","italic":false
+							 }
+						  ]
+					   },
+					   {
+						  "function":"set_lore",
+						  "lore":[
+							 {
+								"text":"Summons a Pummeler on impact with a block.",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"Explosion Radius 4.",
+								"color":"red","italic":false
+							 }
+						  ]
+					   }
+					]
+				 }
+			]
+		}
+	]
+}
+

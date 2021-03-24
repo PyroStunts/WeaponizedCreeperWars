@@ -1,0 +1,66 @@
+{
+	"pools":[
+		{
+			"rolls": 1,
+			"entries":[
+				{
+				"type":"item",
+				"name":"minecraft:tropical_fish_spawn_egg",
+				"functions":[
+				   {
+					  "function":"set_nbt",
+					  "tag":"{EntityTag:{id:\"minecraft:creeper\",ExplosionRadius:6b,Health:100f,NoAI:1b,Tags:[\"chaser\"],Attributes:[{Name:generic.max_health,Base:100},{Name:generic.movement_speed,Base:0.50},{Name:generic.follow_range,Base:40}]}}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Chaser Creeper",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Use this to place a Chaser Creeper.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"You should move away from this Creeper",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"immediately after you've placed it.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"After 5 seconds it will chase a player ",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"but it might chase you. It can move fast",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"and it's invincible.  This Creeper can be",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"detonated with a Detonator Arrow.",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"Explosion Radius 6.",
+							"color":"red","italic":false
+						 }				 
+					  ]
+				   }
+				]
+			 }
+			]
+		}
+	]
+}
+

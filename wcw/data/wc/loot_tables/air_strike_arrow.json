@@ -1,0 +1,46 @@
+{
+	"pools":[
+		{
+			"rolls": 1,
+			"entries":[
+				{
+					"type":"item",
+					"name":"minecraft:tipped_arrow",
+					"functions":[
+					   {
+						  "function":"set_nbt",
+						  "tag":"{CustomPotionEffects:[{Id:3b,Amplifier:102b,Duration:2}],HideFlags:32,CustomPotionColor:2358349,CustomModelData:102}"
+					   },
+					   {
+						  "function":"set_name",
+						  "name":[
+							 {
+								"text":"Air Strike Arrow",
+								"color":"green","italic":false
+							 }
+						  ]
+					   },
+					   {
+						  "function":"set_lore",
+						  "lore":[
+							 {
+								"text":"Summons Bomber Bats which drop",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"several Creeper bombs in the area.",
+								"color":"white","italic":false
+							 },
+							 {
+								"text":"Explosion Radius 5.",
+								"color":"red","italic":false
+							 }
+						  ]
+					   }
+					]
+				 }
+			]
+		}
+	]
+}
+

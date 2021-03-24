@@ -1,0 +1,42 @@
+{
+	"pools":[
+		{
+			"rolls": 1,
+			"entries":[
+				{
+				"type":"item",
+				"name":"minecraft:wolf_spawn_egg",
+				"functions":[
+				   {
+					  "function":"set_nbt",
+					  "tag":"{EntityTag:{Silent:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:200,ShowParticles:0b}]}}"
+				   },
+				   {
+					  "function":"set_name",
+					  "name":[
+						 {
+							"text":"Reveal",
+							"color":"green","italic":false
+						 }
+					  ]
+				   },
+				   {
+					  "function":"set_lore",
+					  "lore":[
+						 {
+							"text":"Makes all players glow for 10 seconds",
+							"color":"white","italic":false
+						 },
+						 {
+							"text":"when placed.",
+							"color":"white","italic":false
+						 }
+					  ]
+				   }
+				]
+			 }
+			]
+		}
+	]
+}
+
