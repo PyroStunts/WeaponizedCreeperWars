@@ -77,7 +77,6 @@ scoreboard players set @e[tag=pummel_from_arrow] StateCounter 100
 kill @e[type=creeper,x=-200,y=0,z=-200,dx=400,dy=4,dz=400]
 scoreboard players add @e[tag=pummel_creeper,nbt={OnGround:1b}] StateCounter 1
 execute at @e[tag=pummel_creeper,scores={StateCounter=100..},nbt={OnGround:1b}] run summon tnt ~ ~-1 ~ 
-execute at @e[tag=pummel_creeper,limit=1] if block ~ ~-1 ~ minecraft:anvil run data merge entity @e[tag=pummel_creeper,limit=1,sort=nearest] {Fuse:0,powered:1b,ExplosionRadius:10b}
 execute at @e[tag=pummel_creeper,limit=1] if block ~ ~-1 ~ minecraft:anvil run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 minecraft:air
 
 
