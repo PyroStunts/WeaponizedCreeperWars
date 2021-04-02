@@ -9,7 +9,7 @@ execute if entity @e[tag=rampage_active] run function wc:rampage_active
 #creeper king
 execute at @p if block ~ ~ ~ minecraft:creeper_head if block ~ ~-1 ~ minecraft:slime_block if block ~ ~-2 ~ minecraft:slime_block run function wc:creeper_king
 scoreboard players add @e[tag=creeper_king] StateCounter 1
-kill @e[tag=creeper_king,scores={StateCounter=500..}]
+tp @e[tag=creeper_king,scores={StateCounter=500..}] ~ -1 ~
 execute at @e[tag=creeper_king] run particle flame ~ ~-2 ~ 2 2 2 1 5 force
 
 
