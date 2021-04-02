@@ -15,7 +15,17 @@ execute if score $fake GameState matches 5 run function wc:winner_screen
 tp @p[gamemode=!creative,x=0,y=128,z=0,distance=200..] 0 128 0
 
 #players can reset their Wins back to 0 with /trigger ResetMyScore
-execute if entity @p[scores={ResetMyScore=1}] run scoreboard players set @p[scores={ResetMyScore=1}] Wins 0
-execute if entity @p[scores={ResetMyScore=1}] run scoreboard players enable @p[scores={ResetMyScore=1}] ResetMyScore
-execute if entity @p[scores={ResetMyScore=1}] run scoreboard players set @p[scores={ResetMyScore=1}] ResetMyScore 0
+scoreboard players set @p[scores={ResetMyScore=1}] Wins 0
+scoreboard players enable @p[scores={ResetMyScore=1}] ResetMyScore
+scoreboard players set @p[scores={ResetMyScore=1}] ResetMyScore 0
+
+scoreboard players enable @a ShowRules
+execute if entity @p[scores={ShowRules=1}] run function wc:rules
+scoreboard players set @p[scores={ShowRules=1}] ShowRules 0
+
+scoreboard players enable @a RulesAgree
+tag @p[scores={RulesAgree=1}] add RulesAgree
+tellraw @p[scores={RulesAgree=1}] {"text":"Thanks. Welcome to Weaponized Creeper Wars","color":"green"}
+scoreboard players set @p[scores={RulesAgree=1}] RulesAgree 0
+
 

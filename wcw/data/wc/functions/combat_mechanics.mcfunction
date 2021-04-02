@@ -6,6 +6,13 @@ data merge entity @e[limit=1,tag=rampage,nbt={NoAI:1b},scores={StateCounter=100.
 execute if entity @e[tag=rampage_active] run function wc:rampage_active
 
 
+#creeper king
+execute at @p if block ~ ~ ~ minecraft:creeper_head if block ~ ~-1 ~ minecraft:slime_block if block ~ ~-2 ~ minecraft:slime_block run function wc:creeper_king
+scoreboard players add @e[tag=creeper_king] StateCounter 1
+kill @e[tag=creeper_king,scores={StateCounter=500..}]
+execute at @e[tag=creeper_king] run particle flame ~ ~-2 ~ 2 2 2 1 5 force
+
+
 #Lob high arc creeper grenade if looking towards your feet
 execute at @p[limit=1,x_rotation=45..] run function wc:high_arc_creeper
 #Lob low arc creeper grenade if looking more upwards
@@ -96,6 +103,7 @@ scoreboard players add @e[tag=creeper_bomb] StateCounter 1
 data merge entity @e[limit=1,tag=creeper_bomb,scores={StateCounter=100}] {Fuse:1,powered:1b}
 
 
+
 #kill any type of arrow in the ground
 kill @e[type=arrow,limit=1,nbt={inGround:1b}]
 
@@ -128,5 +136,6 @@ execute if entity @p[gamemode=survival,scores={StateCounter=100..}] run scoreboa
 title @p[gamemode=survival,x=0,y=128,z=0,distance=126..] title {"text":"OUT OF BOUNDS","color":"red"}
 title @p[gamemode=survival,x=0,y=128,z=0,distance=126..] subtitle {"text":"You have been eliminated","color":"green"}
 gamemode spectator @p[gamemode=survival,x=0,y=128,z=0,distance=126..]
+
 
 

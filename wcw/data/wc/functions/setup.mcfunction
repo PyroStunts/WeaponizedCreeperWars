@@ -42,6 +42,8 @@ scoreboard players set $fake PlayerCount 0
 
 scoreboard objectives add ResetMyScore trigger
 scoreboard objectives add SurvivalMode trigger
+scoreboard objectives add ShowRules trigger
+scoreboard objectives add RulesAgree trigger
 
 scoreboard objectives add Wins dummy "Game Wins"
 scoreboard objectives setdisplay belowName Wins
