@@ -18,8 +18,8 @@ bossbar add next_supply {"text":"Next Supply Drop","color":"green"}
 bossbar set minecraft:next_supply color green 
 bossbar set minecraft:next_supply max 800
 
-time set day
-gamerule doDaylightCycle false
+time set noon
+#gamerule doDaylightCycle true
 gamerule doWeatherCycle false
 gamerule commandBlockOutput false
 gamerule doImmediateRespawn true
@@ -40,10 +40,14 @@ scoreboard players set $fake StateCounter 0
 scoreboard objectives add PlayerCount dummy "Player Count"
 scoreboard players set $fake PlayerCount 0
 
+scoreboard objectives add ApocalypseCount dummy "Apocalypse Counter"
+scoreboard players set $fake ApocalypseCount 0
+
 scoreboard objectives add ResetMyScore trigger
 scoreboard objectives add SurvivalMode trigger
 scoreboard objectives add ShowRules trigger
 scoreboard objectives add RulesAgree trigger
+scoreboard objectives add Apocalypse trigger
 
 scoreboard objectives add Wins dummy "Game Wins"
 scoreboard objectives setdisplay belowName Wins

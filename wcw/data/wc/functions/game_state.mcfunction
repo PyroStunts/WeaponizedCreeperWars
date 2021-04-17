@@ -4,7 +4,7 @@
 #2 10 second gamestart count down
 #3 init game 
 #4 in game
-#5 1 player left - Game Over (5 seconds) back #1
+#5 1 player left - Game Over (5 seconds) then back to #1
 execute if score $fake GameState matches 1 run function wc:wait_for_two_players
 execute if score $fake GameState matches 2 run function wc:countdown 
 execute if score $fake GameState matches 4 run function wc:main_game

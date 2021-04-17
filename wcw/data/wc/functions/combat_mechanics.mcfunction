@@ -1,3 +1,12 @@
+#anvils normally cant be blown up so we have to remove them (especially for pummelers)
+execute at @e[type=creeper] if block ~ ~-1 ~ minecraft:anvil run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 minecraft:air
+
+#creeper king
+execute at @a if block ~ ~ ~ minecraft:creeper_head if block ~ ~-1 ~ minecraft:slime_block run function wc:creeper_king
+scoreboard players add @e[tag=creeper_king] StateCounter 1
+tp @e[tag=creeper_king,scores={StateCounter=500..}] ~ -1 ~
+execute at @e[tag=creeper_king] run particle flame ~ ~-2 ~ 2 2 2 1 5 force
+
 
 #ramapage creeper 5 seconds get away time
 scoreboard players add @e[tag=rampage] StateCounter 1
@@ -6,11 +15,7 @@ data merge entity @e[limit=1,tag=rampage,nbt={NoAI:1b},scores={StateCounter=100.
 execute if entity @e[tag=rampage_active] run function wc:rampage_active
 
 
-#creeper king
-execute at @p if block ~ ~ ~ minecraft:creeper_head if block ~ ~-1 ~ minecraft:slime_block if block ~ ~-2 ~ minecraft:slime_block run function wc:creeper_king
-scoreboard players add @e[tag=creeper_king] StateCounter 1
-tp @e[tag=creeper_king,scores={StateCounter=500..}] ~ -1 ~
-execute at @e[tag=creeper_king] run particle flame ~ ~-2 ~ 2 2 2 1 5 force
+
 
 
 #Lob high arc creeper grenade if looking towards your feet
@@ -84,7 +89,7 @@ scoreboard players set @e[tag=pummel_from_arrow] StateCounter 100
 kill @e[type=creeper,x=-200,y=0,z=-200,dx=400,dy=4,dz=400]
 scoreboard players add @e[tag=pummel_creeper,nbt={OnGround:1b}] StateCounter 1
 execute at @e[tag=pummel_creeper,scores={StateCounter=100..},nbt={OnGround:1b}] run summon tnt ~ ~-1 ~ 
-execute at @e[tag=pummel_creeper,limit=1] if block ~ ~-1 ~ minecraft:anvil run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 minecraft:air
+
 
 
 #Amplifier:4b on ground, summon chaser creeper

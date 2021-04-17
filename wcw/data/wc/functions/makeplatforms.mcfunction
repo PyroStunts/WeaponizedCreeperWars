@@ -61,11 +61,21 @@ schedule function wc:give_starting_items 2s
 #kill the items on other platforms that were not teleported to.
 kill @e[type=item,tag=!hasTeleportedTo]
 scoreboard players enable @a ResetMyScore
-effect give @a minecraft:saturation 36000 1 true
+effect give @a minecraft:saturation 240000 1 true
 bossbar set minecraft:next_supply players @a
 bossbar set minecraft:next_supply visible true
 execute at @a run playsound minecraft:block.beacon.power_select master @p
 #So PVP is off
 team join SameTeam @a
+
+#reset Apocalyse mechanic
+scoreboard players enable @a Apocalypse
+scoreboard players set @a Apocalypse 0
+scoreboard players set $fake ApocalypseCount 0
+
+
+time set noon
+gamerule doDaylightCycle false
+
 #Main game mode starts
 scoreboard players set $fake GameState 4
