@@ -64,7 +64,7 @@ level-type=default
 text-filtering-config=
 spawn-monsters=true
 enforce-whitelist=false
-spawn-protection=1
+spawn-protection=0
 resource-pack-sha1=
 max-world-size=29999984
 ```
