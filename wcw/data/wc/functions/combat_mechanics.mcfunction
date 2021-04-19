@@ -120,12 +120,12 @@ execute as @e[type=egg,scores={StateCounter=5},x=0,y=128,z=0,distance=..124] at 
 
 #glass sheild
 scoreboard players add @e[type=snowball] StateCounter 1
-execute at @e[type=snowball,scores={StateCounter=1}] at @p[limit=1,x_rotation=80..90] run tag @e[type=snowball,limit=1,scores={StateCounter=1}] add FloorRoof 
-execute at @e[type=snowball,scores={StateCounter=1}] at @p[limit=1,x_rotation=-90..-80] run tag @e[type=snowball,limit=1,scores={StateCounter=1}] add FloorRoof 
-execute at @e[type=snowball,scores={StateCounter=1}] at @p[limit=1,y_rotation=135..225] run tag @e[type=snowball,limit=1,scores={StateCounter=1},tag=!FloorRoof] add NorthSouth
-execute at @e[type=snowball,scores={StateCounter=1}] at @p[limit=1,y_rotation=-45..45] run tag @e[type=snowball,limit=1,scores={StateCounter=1},tag=!FloorRoof] add NorthSouth  
-execute at @e[type=snowball,scores={StateCounter=1}] at @p[limit=1,y_rotation=-135..-45] run tag @e[type=snowball,limit=1,scores={StateCounter=1},tag=!FloorRoof,tag=!NorthSouth] add EastWest 
-execute at @e[type=snowball,scores={StateCounter=1}] at @p[limit=1,y_rotation=45..135] run tag @e[type=snowball,limit=1,scores={StateCounter=1},tag=!FloorRoof,tag=!NorthSouth] add EastWest 
+execute at @e[type=snowball,scores={StateCounter=1}] as @p if entity @s[x_rotation=80..90] run tag @e[type=snowball,limit=1,scores={StateCounter=1}] add FloorRoof
+execute at @e[type=snowball,scores={StateCounter=1}] as @p if entity @s[x_rotation=-90..-80] run tag @e[type=snowball,limit=1,scores={StateCounter=1}] add FloorRoof
+execute at @e[type=snowball,scores={StateCounter=1}] as @p if entity @s[y_rotation=135..225] run tag @e[type=snowball,limit=1,scores={StateCounter=1},tag=!FloorRoof] add NorthSouth
+execute at @e[type=snowball,scores={StateCounter=1}] as @p if entity @s[y_rotation=-45..45] run tag @e[type=snowball,limit=1,scores={StateCounter=1},tag=!FloorRoof] add NorthSouth
+execute at @e[type=snowball,scores={StateCounter=1}] as @p if entity @s[y_rotation=-135..-45] run tag @e[type=snowball,limit=1,scores={StateCounter=1},tag=!FloorRoof,tag=!NorthSouth] add EastWest
+execute at @e[type=snowball,scores={StateCounter=1}] as @p if entity @s[y_rotation=45..135] run tag @e[type=snowball,limit=1,scores={StateCounter=1},tag=!FloorRoof,tag=!NorthSouth] add EastWest
 execute if entity @e[type=snowball,scores={StateCounter=10},x=0,y=128,z=0,distance=..124] run function wc:deploy_glass_shield
 
 
