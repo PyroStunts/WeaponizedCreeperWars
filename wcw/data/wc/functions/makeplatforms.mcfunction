@@ -39,7 +39,7 @@ fill 79 122 -60 81 126 -58 minecraft:air replace
 scoreboard players set $fake SupplyDrop 400
 kill @e[type=item]
 
-#The item is summoned at each platform so that it can be 
+#The item is summoned at each platform so that it can be
 summon item 99 124 -1 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"white"}}}
 summon item 79 124 57 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"orange"}}}
 summon item 29 124 94 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"magenta"}}}
@@ -52,8 +52,8 @@ summon item 29 124 -97 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakab
 summon item 79 124 -60 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"red"}}}
 gamemode spectator @a[gamemode=!creative]
 
-#recursive function until no more spectators left. 
-function wc:setup_player
+#players are processed one after the other
+execute as @a[gamemode=spectator] run function wc:setup_player
 
 #have to schedule this function to give player enough time to pickup axe they were just teleported to
 schedule function wc:give_starting_items 2s
