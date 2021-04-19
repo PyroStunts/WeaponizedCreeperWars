@@ -19,11 +19,11 @@ execute if entity @e[type=creeper,tag=rampage_active] run function wc:rampage_ac
 
 
 #Lob high arc creeper grenade if looking towards your feet
-execute at @p[limit=1,x_rotation=45..] run function wc:high_arc_creeper
+execute as @a[x_rotation=45..] at @s if entity @e[type=creeper,tag=lob_creeper,distance=..6] run function wc:high_arc_creeper
 #Lob low arc creeper grenade if looking more upwards
-execute at @p[limit=1,x_rotation=..45] run function wc:low_arc_creeper
+execute as @a[x_rotation=..45] at @s if entity @e[type=creeper,tag=lob_creeper,distance=..6] run function wc:low_arc_creeper
 #explode the creeper grenades when it lands
-data merge entity @e[limit=1,tag=flying_creeper,nbt={OnGround:1b}] {ExplosionRadius:5b,Fuse:2,ignited:1b}
+execute as @e[type=creeper,tag=flying_creeper,nbt={OnGround:1b}] run data merge entity @s {ExplosionRadius:5b,Fuse:2,ignited:1b}
 
 
 #Amplifier:1b arrow on ground, summon rocket creeper
