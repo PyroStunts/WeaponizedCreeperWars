@@ -38,7 +38,7 @@ kill @e[type=parrot]
 
 
 #trident in ground spawns a jail if player is close
-execute at @e[type=trident,limit=1,nbt={inGround:1b}] at @p[gamemode=survival,sort=nearest,distance=..5] run function wc:creeper_jail
+execute as @e[type=trident,nbt={inGround:1b}] at @s at @p[gamemode=survival,sort=nearest,distance=..5] run function wc:creeper_jail
 
 
 #Reveal players
