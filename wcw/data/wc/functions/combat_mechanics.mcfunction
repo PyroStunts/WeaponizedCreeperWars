@@ -9,10 +9,10 @@ execute at @e[tag=creeper_king] run particle flame ~ ~-2 ~ 2 2 2 1 5 force
 
 
 #ramapage creeper 5 seconds get away time
-scoreboard players add @e[tag=rampage] StateCounter 1
-data merge entity @e[limit=1,tag=rampage,nbt={NoAI:1b},scores={StateCounter=100..}] {NoAI:0b,Tags:["rampage_active"]}
+scoreboard players add @e[type=creeper,tag=rampage] StateCounter 1
+execute as @e[type=creeper,tag=rampage,nbt={NoAI:1b},scores={StateCounter=100..}] run data merge entity @s {NoAI:0b,Tags:["rampage_active"]}
 #if this creeper exists spawn loads of creepers
-execute if entity @e[tag=rampage_active] run function wc:rampage_active
+execute if entity @e[type=creeper,tag=rampage_active] run function wc:rampage_active
 
 
 
