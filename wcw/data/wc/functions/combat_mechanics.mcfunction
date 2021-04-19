@@ -116,7 +116,7 @@ kill @e[type=arrow,nbt={inGround:1b}]
 
 #safety net
 scoreboard players add @e[type=egg] StateCounter 1
-execute if entity @e[type=egg,scores={StateCounter=5},x=0,y=128,z=0,distance=..124] run function wc:deploy_net
+execute as @e[type=egg,scores={StateCounter=5},x=0,y=128,z=0,distance=..124] at @s run function wc:deploy_net
 
 #glass sheild
 scoreboard players add @e[type=snowball] StateCounter 1
