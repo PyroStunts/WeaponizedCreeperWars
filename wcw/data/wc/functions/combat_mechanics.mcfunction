@@ -50,7 +50,7 @@ kill @e[type=wolf]
 
 
 #Amplifier:101b on any creeper blows it up if hte arrow doesn't kill it first. Good for explding bomb creepers
-data merge entity @e[limit=1,type=creeper,nbt={ActiveEffects:[{Amplifier:101b}]}] {Fuse:0}
+execute as @e[type=creeper,nbt={ActiveEffects:[{Amplifier:101b}]}] run data merge entity @s {Fuse:0}
 
 #Amplifier:101b arrow on ground, summon creeper
 execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:101b}]}] run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:10,ignited:1b}
@@ -66,9 +66,9 @@ execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:102b}]
 scoreboard players add @e[tag=bomber_bat] StateCounter 1
 scoreboard players add @e[tag=bomber_bat] BatAge 1
 execute at @e[tag=bomber_bat,scores={StateCounter=20..}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["airstrike_creeper"]}
-data merge entity @e[limit=1,tag=airstrike_creeper,nbt={OnGround:1b}] {ExplosionRadius:2b,Fuse:2,ignited:1b}
-execute at @e[tag=bomber_bat,scores={StateCounter=20..}] run scoreboard players set @e[tag=bomber_bat,scores={StateCounter=20..}] StateCounter 0
 kill @e[tag=bomber_bat,scores={BatAge=100..}]
+execute as @e[type=creeper,tag=airstrike_creeper,nbt={OnGround:1b}] run data merge entity @s {ExplosionRadius:2b,Fuse:2,ignited:1b}
+scoreboard players set @e[type=bat,tag=bomber_bat,scores={StateCounter=20..}] StateCounter 0
 
 
 #tree bats, summoned via tree_bats.mcfunction via discord
@@ -99,14 +99,14 @@ execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:4b}]}]
 
 #chaser creeper
 scoreboard players add @e[tag=chaser,nbt={NoAI:1b}] StateCounter 1
-data merge entity @e[limit=1,tag=chaser,nbt={NoAI:1b},scores={StateCounter=100..}] {NoAI:0b,ExplosionRadius:6b}
+execute as @e[type=creeper,tag=chaser,nbt={NoAI:1b},scores={StateCounter=100..}] run data merge entity @s {NoAI:0b}
 
 #Amplifier:2b on ground, summon bomb creeper
 execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:2b}]}] run summon creeper ~ ~ ~ {Fuse:20,powered:1b,Tags:["creeper_bomb"],Attributes:[{Name:generic.follow_range,Base:1}]}
 
 #bomb creeper
 scoreboard players add @e[tag=creeper_bomb] StateCounter 1
-data merge entity @e[limit=1,tag=creeper_bomb,scores={StateCounter=100}] {Fuse:1,powered:1b}
+execute as @e[type=creeper,tag=creeper_bomb,scores={StateCounter=100}] run data merge entity @s {Fuse:1,powered:1b}
 
 
 
@@ -130,18 +130,15 @@ execute if entity @e[type=snowball,scores={StateCounter=10},x=0,y=128,z=0,distan
 
 
 #Warn Out of Bounds
-scoreboard players add @p[gamemode=survival,x=0,y=128,z=0,distance=123..] StateCounter 1
-effect give @p[gamemode=survival,x=0,y=128,z=0,distance=123..] blindness 2
-title @p[gamemode=survival,scores={StateCounter=100..}] title {"text":"WARNING","color":"red"}
-title @p[gamemode=survival,scores={StateCounter=100..}] subtitle {"text":"You will be eliminated if you travel more than 123 blocks from the center","color":"red"}
-execute at @p[gamemode=survival,scores={StateCounter=100..}] run playsound minecraft:ambient.cave master @p[gamemode=survival,scores={StateCounter=100..}]
-execute if entity @p[gamemode=survival,scores={StateCounter=100..}] run scoreboard players set @p[gamemode=survival,scores={StateCounter=100..}] StateCounter 0
+scoreboard players add @a[gamemode=survival,x=0,y=128,z=0,distance=123..] StateCounter 1
+effect give @a[gamemode=survival,x=0,y=128,z=0,distance=123..] blindness 2
+title @a[gamemode=survival,scores={StateCounter=100..}] title {"text":"WARNING","color":"red"}
+title @a[gamemode=survival,scores={StateCounter=100..}] subtitle {"text":"You will be eliminated if you travel more than 123 blocks from the center","color":"red"}
+execute as @a[gamemode=survival,scores={StateCounter=100..}] run playsound minecraft:ambient.cave master @s
+execute as @a[gamemode=survival,scores={StateCounter=100..}] run scoreboard players set @s StateCounter 0
 
 
 #Eliminate out of bounds
-title @p[gamemode=survival,x=0,y=128,z=0,distance=126..] title {"text":"OUT OF BOUNDS","color":"red"}
-title @p[gamemode=survival,x=0,y=128,z=0,distance=126..] subtitle {"text":"You have been eliminated","color":"green"}
-gamemode spectator @p[gamemode=survival,x=0,y=128,z=0,distance=126..]
-
-
-
+title @a[gamemode=survival,x=0,y=128,z=0,distance=126..] title {"text":"OUT OF BOUNDS","color":"red"}
+title @a[gamemode=survival,x=0,y=128,z=0,distance=126..] subtitle {"text":"You have been eliminated","color":"green"}
+gamemode spectator @a[gamemode=survival,x=0,y=128,z=0,distance=126..]
