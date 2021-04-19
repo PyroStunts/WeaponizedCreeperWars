@@ -1,7 +1,7 @@
 function wc:combat_mechanics
 
-#supply drop 
-execute at @e[tag=supply_drop,nbt={OnGround:0b}] run particle lava ~ ~ ~ 1 10 1 0 1 normal
+#supply drop
+execute at @e[type=creeper,tag=supply_drop,nbt={OnGround:0b}] run particle lava ~ ~ ~ 1 10 1 0 1 normal
 scoreboard players add $fake SupplyDrop 1
 
 #tripples frequency or supply drop in Apolayspe node

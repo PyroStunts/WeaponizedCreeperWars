@@ -3,9 +3,9 @@ execute at @e[type=creeper] if block ~ ~-1 ~ minecraft:anvil run fill ~1 ~-1 ~1 
 
 #creeper king
 execute at @a if block ~ ~ ~ minecraft:creeper_head if block ~ ~-1 ~ minecraft:slime_block run function wc:creeper_king
-scoreboard players add @e[tag=creeper_king] StateCounter 1
-tp @e[tag=creeper_king,scores={StateCounter=500..}] ~ -1 ~
-execute at @e[tag=creeper_king] run particle flame ~ ~-2 ~ 2 2 2 1 5 force
+scoreboard players add @e[type=slime,tag=creeper_king] StateCounter 1
+tp @e[type=slime,tag=creeper_king,scores={StateCounter=500..}] ~ -1 ~
+execute at @e[type=slime,tag=creeper_king] run particle flame ~ ~-2 ~ 2 2 2 1 5 force
 
 
 #ramapage creeper 5 seconds get away time
@@ -32,7 +32,7 @@ execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:1b}]}]
 
 #launch rocket
 execute at @e[type=parrot] run summon firework_rocket ~ ~ ~ {LifeTime:80,Passengers:[{id:"minecraft:creeper",NoGravity:1b,Invulnerable:1b,ExplosionRadius:5b,Fuse:80,ignited:1b,Tags:["rocket_creeper"],ActiveEffects:[{Id:25b,Amplifier:4b,Duration:80}]}],FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:3,Trail:1b,Colors:[I;720658,2738448],FadeColors:[I;2780716,1606932]}]}}}}
-execute as @e[tag=rocket_creeper] at @e[tag=rocket_creeper] unless block ~ ~2 ~ air run summon tnt ~ ~2 ~
+execute as @e[type=creeper,tag=rocket_creeper] at @s unless block ~ ~2 ~ air run summon tnt ~ ~2 ~
 tp @e[type=parrot] ~ -10 ~
 kill @e[type=parrot]
 
@@ -42,8 +42,8 @@ execute as @e[type=trident,nbt={inGround:1b}] at @s at @p[gamemode=survival,sort
 
 
 #Reveal players
-execute as @e[type=wolf] run effect give @a minecraft:glowing 10 1
-execute as @e[type=wolf] at @a[gamemode=survival] run summon firework_rocket ~ ~ ~ {LifeTime:60,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:3,Flicker:1b,Trail:1b,Colors:[I;1769216,7339804,2721537],FadeColors:[I;90388,1604134,5350170]}]}}}}
+execute if entity @e[type=wolf] run effect give @a minecraft:glowing 10 1
+execute if entity @e[type=wolf] at @a[gamemode=survival] run summon firework_rocket ~ ~ ~ {LifeTime:60,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:3,Flicker:1b,Trail:1b,Colors:[I;1769216,7339804,2721537],FadeColors:[I;90388,1604134,5350170]}]}}}}
 execute at @e[type=wolf] run teleport @p ~ ~ ~ facing entity @p[gamemode=survival,distance=5..]
 tp @e[type=wolf] ~ -10 ~
 kill @e[type=wolf]
@@ -63,20 +63,20 @@ execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:102b}]
 execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:102b}]}] run summon bat ~ ~22 ~ {Invulnerable:1b,Tags:["bomber_bat"]}
 
 
-scoreboard players add @e[tag=bomber_bat] StateCounter 1
-scoreboard players add @e[tag=bomber_bat] BatAge 1
-execute at @e[tag=bomber_bat,scores={StateCounter=20..}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["airstrike_creeper"]}
-kill @e[tag=bomber_bat,scores={BatAge=100..}]
+scoreboard players add @e[type=bat,tag=bomber_bat] StateCounter 1
+scoreboard players add @e[type=bat,tag=bomber_bat] BatAge 1
+execute at @e[type=bat,tag=bomber_bat,scores={StateCounter=20..}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["airstrike_creeper"]}
 execute as @e[type=creeper,tag=airstrike_creeper,nbt={OnGround:1b}] run data merge entity @s {ExplosionRadius:2b,Fuse:2,ignited:1b}
 scoreboard players set @e[type=bat,tag=bomber_bat,scores={StateCounter=20..}] StateCounter 0
+kill @e[type=bat,tag=bomber_bat,scores={BatAge=100..}]
 
 
 #tree bats, summoned via tree_bats.mcfunction via discord
-scoreboard players add @e[tag=tree_bat] BatAge 1
-execute at @e[tag=tree_bat] run setblock ~ ~-3 ~ minecraft:jungle_log[axis=y] keep
-execute at @e[tag=tree_bat] run setblock ~ ~-2 ~ minecraft:jungle_leaves keep
-tp @e[tag=tree_bat,x=0,y=128,z=0,distance=123..] 0 128 0
-kill @e[tag=tree_bat,scores={BatAge=500..}]
+scoreboard players add @e[type=bat,tag=tree_bat] BatAge 1
+execute at @e[type=bat,tag=tree_bat] run setblock ~ ~-3 ~ minecraft:jungle_log[axis=y] keep
+execute at @e[type=bat,tag=tree_bat] run setblock ~ ~-2 ~ minecraft:jungle_leaves keep
+tp @e[type=bat,tag=tree_bat,x=0,y=128,z=0,distance=123..] 0 128 0
+kill @e[type=bat,tag=tree_bat,scores={BatAge=500..}]
 
 
 #Amplifier:3b arrow on ground, summon pummeler
@@ -88,8 +88,8 @@ tag @e[type=creeper,tag=pummel_from_arrow] remove pummel_from_arrow
 #pummel creeper
 #kill the pummeler so it doesn't last forever on the spawn platform. All others will die in the void
 kill @e[type=creeper,x=-200,y=0,z=-200,dx=400,dy=4,dz=400]
-scoreboard players add @e[tag=pummel_creeper,nbt={OnGround:1b}] StateCounter 1
-execute at @e[tag=pummel_creeper,scores={StateCounter=100..},nbt={OnGround:1b}] run summon tnt ~ ~-1 ~ 
+scoreboard players add @e[type=creeper,tag=pummel_creeper,nbt={OnGround:1b}] StateCounter 1
+execute at @e[type=creeper,tag=pummel_creeper,scores={StateCounter=100..},nbt={OnGround:1b}] run summon tnt ~ ~-1 ~
 
 
 
@@ -98,14 +98,14 @@ execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:4b}]}]
 
 
 #chaser creeper
-scoreboard players add @e[tag=chaser,nbt={NoAI:1b}] StateCounter 1
+scoreboard players add @e[type=creeper,tag=chaser,nbt={NoAI:1b}] StateCounter 1
 execute as @e[type=creeper,tag=chaser,nbt={NoAI:1b},scores={StateCounter=100..}] run data merge entity @s {NoAI:0b}
 
 #Amplifier:2b on ground, summon bomb creeper
 execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:2b}]}] run summon creeper ~ ~ ~ {Fuse:20,powered:1b,Tags:["creeper_bomb"],Attributes:[{Name:generic.follow_range,Base:1}]}
 
 #bomb creeper
-scoreboard players add @e[tag=creeper_bomb] StateCounter 1
+scoreboard players add @e[type=creeper,tag=creeper_bomb] StateCounter 1
 execute as @e[type=creeper,tag=creeper_bomb,scores={StateCounter=100}] run data merge entity @s {Fuse:1,powered:1b}
 
 
