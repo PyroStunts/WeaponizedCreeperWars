@@ -8,9 +8,9 @@ fill 24 3 24 -16 3 -16 minecraft:air
 
 
 
-#directly under the rings. A player who dies will spawn on this and will be imediately be out of bounds
-setworldspawn 0 2 0
-fill 1 1 1 -1 1 -1 minecraft:barrier
+#A player who dies will spawn here and will be imediately be out of bounds
+setworldspawn 0 255 0
+
 
 gamemode spectator @a
 
