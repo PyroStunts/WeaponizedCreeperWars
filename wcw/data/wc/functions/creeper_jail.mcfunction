@@ -1,5 +1,6 @@
-execute at @e[type=trident,limit=1,nbt={inGround:1b}] run effect give @p[gamemode=survival,sort=nearest] mining_fatigue 10 2
-kill @e[type=trident,limit=1,nbt={inGround:1b}]
+# Function is called as a trident with a nearby player and at the position of that player
+effect give @p[gamemode=survival] mining_fatigue 10 2
+kill @s
 
 fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:mossy_cobblestone
 
@@ -40,4 +41,3 @@ setblock ~ ~2 ~-2 minecraft:mossy_cobblestone
 setblock ~-2 ~2 ~ minecraft:mossy_cobblestone
 
 fill ~-2 ~3 ~-2 ~2 ~3 ~2 minecraft:mossy_cobblestone
-

@@ -1,2 +1,3 @@
-execute at @e[type=egg,scores={StateCounter=5}] run fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 minecraft:slime_block replace
-kill @e[type=egg,scores={StateCounter=5}]
+# Function is called as every safety platform egg with StateCounter = 5 and at the position of it
+fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 minecraft:slime_block replace
+kill @s

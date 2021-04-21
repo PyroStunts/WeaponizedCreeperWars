@@ -3,7 +3,7 @@
 # stuff like that.
 
 
-#Remove void world platform. 
+#Remove void world platform.
 fill 24 3 24 -16 3 -16 minecraft:air
 
 
@@ -15,7 +15,7 @@ fill 1 1 1 -1 1 -1 minecraft:barrier
 gamemode spectator @a
 
 bossbar add next_supply {"text":"Next Supply Drop","color":"green"}
-bossbar set minecraft:next_supply color green 
+bossbar set minecraft:next_supply color green
 bossbar set minecraft:next_supply max 800
 
 time set noon
@@ -39,6 +39,7 @@ scoreboard players set $fake StateCounter 0
 
 scoreboard objectives add PlayerCount dummy "Player Count"
 scoreboard players set $fake PlayerCount 0
+scoreboard players set $10 PlayerCount 10
 
 scoreboard objectives add ApocalypseCount dummy "Apocalypse Counter"
 scoreboard players set $fake ApocalypseCount 0

@@ -1,37 +1,39 @@
-#36 possible directions the creeper can be thrown at with a high arc 
-execute at @p[limit=1,y_rotation=-185..-175] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.00,2.0,-1.00]}
-execute at @p[limit=1,y_rotation=-175..-165] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.17,2.0,-0.98]}
-execute at @p[limit=1,y_rotation=-165..-155] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.34,2.0,-0.94]}
-execute at @p[limit=1,y_rotation=-155..-145] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.50,2.0,-0.87]}
-execute at @p[limit=1,y_rotation=-145..-135] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.64,2.0,-0.77]}
-execute at @p[limit=1,y_rotation=-135..-125] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.77,2.0,-0.64]}
-execute at @p[limit=1,y_rotation=-125..-115] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.87,2.0,-0.50]}
-execute at @p[limit=1,y_rotation=-115..-105] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.94,2.0,-0.34]}
-execute at @p[limit=1,y_rotation=-105..-95] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.98,2.0,-0.17]}
-execute at @p[limit=1,y_rotation=-95..-85] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[1.00,2.0,0.00]}
-execute at @p[limit=1,y_rotation=-85..-75] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.98,2.0,0.17]}
-execute at @p[limit=1,y_rotation=-75..-65] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.94,2.0,0.34]}
-execute at @p[limit=1,y_rotation=-65..-55] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.87,2.0,0.50]}
-execute at @p[limit=1,y_rotation=-55..-45] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.77,2.0,0.64]}
-execute at @p[limit=1,y_rotation=-45..-35] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.64,2.0,0.77]}
-execute at @p[limit=1,y_rotation=-35..-25] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.50,2.0,0.87]}
-execute at @p[limit=1,y_rotation=-25..-15] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.34,2.0,0.94]}
-execute at @p[limit=1,y_rotation=-15..-5] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.17,2.0,0.98]}
-execute at @p[limit=1,y_rotation=-5..5] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.00,2.0,1.00]}
-execute at @p[limit=1,y_rotation=5..15] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.17,2.0,0.98]}
-execute at @p[limit=1,y_rotation=15..25] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.34,2.0,0.94]}
-execute at @p[limit=1,y_rotation=25..35] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.50,2.0,0.87]}
-execute at @p[limit=1,y_rotation=35..45] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.64,2.0,0.77]}
-execute at @p[limit=1,y_rotation=45..55] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.77,2.0,0.64]}
-execute at @p[limit=1,y_rotation=55..65] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.87,2.0,0.50]}
-execute at @p[limit=1,y_rotation=65..75] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.94,2.0,0.34]}
-execute at @p[limit=1,y_rotation=75..85] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.98,2.0,0.17]}
-execute at @p[limit=1,y_rotation=85..95] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-1.00,2.0,0.00]}
-execute at @p[limit=1,y_rotation=95..105] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.98,2.0,-0.17]}
-execute at @p[limit=1,y_rotation=105..115] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.94,2.0,-0.34]}
-execute at @p[limit=1,y_rotation=115..125] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.87,2.0,-0.50]}
-execute at @p[limit=1,y_rotation=125..135] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.77,2.0,-0.64]}
-execute at @p[limit=1,y_rotation=135..145] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.64,2.0,-0.77]}
-execute at @p[limit=1,y_rotation=145..155] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.50,2.0,-0.87]}
-execute at @p[limit=1,y_rotation=155..165] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.34,2.0,-0.94]}
-execute at @p[limit=1,y_rotation=165..175] run data merge entity @e[tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.17,2.0,-0.98]}
+#Function is called as a player with a lob_creeper (grenade) nearby and its position
+#The players x_rotation (facingdirection) is 45 or higher
+#36 possible directions the creeper can be thrown at with a high arc
+execute if entity @s[y_rotation=-185..-175] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.00,2.0,-1.00]}
+execute if entity @s[y_rotation=-175..-165] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.17,2.0,-0.98]}
+execute if entity @s[y_rotation=-165..-155] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.34,2.0,-0.94]}
+execute if entity @s[y_rotation=-155..-145] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.50,2.0,-0.87]}
+execute if entity @s[y_rotation=-145..-135] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.64,2.0,-0.77]}
+execute if entity @s[y_rotation=-135..-125] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.77,2.0,-0.64]}
+execute if entity @s[y_rotation=-125..-115] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.87,2.0,-0.50]}
+execute if entity @s[y_rotation=-115..-105] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.94,2.0,-0.34]}
+execute if entity @s[y_rotation=-105..-95] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.98,2.0,-0.17]}
+execute if entity @s[y_rotation=-95..-85] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[1.00,2.0,0.00]}
+execute if entity @s[y_rotation=-85..-75] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.98,2.0,0.17]}
+execute if entity @s[y_rotation=-75..-65] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.94,2.0,0.34]}
+execute if entity @s[y_rotation=-65..-55] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.87,2.0,0.50]}
+execute if entity @s[y_rotation=-55..-45] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.77,2.0,0.64]}
+execute if entity @s[y_rotation=-45..-35] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.64,2.0,0.77]}
+execute if entity @s[y_rotation=-35..-25] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.50,2.0,0.87]}
+execute if entity @s[y_rotation=-25..-15] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.34,2.0,0.94]}
+execute if entity @s[y_rotation=-15..-5] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.17,2.0,0.98]}
+execute if entity @s[y_rotation=-5..5] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[0.00,2.0,1.00]}
+execute if entity @s[y_rotation=5..15] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.17,2.0,0.98]}
+execute if entity @s[y_rotation=15..25] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.34,2.0,0.94]}
+execute if entity @s[y_rotation=25..35] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.50,2.0,0.87]}
+execute if entity @s[y_rotation=35..45] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.64,2.0,0.77]}
+execute if entity @s[y_rotation=45..55] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.77,2.0,0.64]}
+execute if entity @s[y_rotation=55..65] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.87,2.0,0.50]}
+execute if entity @s[y_rotation=65..75] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.94,2.0,0.34]}
+execute if entity @s[y_rotation=75..85] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.98,2.0,0.17]}
+execute if entity @s[y_rotation=85..95] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-1.00,2.0,0.00]}
+execute if entity @s[y_rotation=95..105] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.98,2.0,-0.17]}
+execute if entity @s[y_rotation=105..115] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.94,2.0,-0.34]}
+execute if entity @s[y_rotation=115..125] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.87,2.0,-0.50]}
+execute if entity @s[y_rotation=125..135] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.77,2.0,-0.64]}
+execute if entity @s[y_rotation=135..145] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.64,2.0,-0.77]}
+execute if entity @s[y_rotation=145..155] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.50,2.0,-0.87]}
+execute if entity @s[y_rotation=155..165] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.34,2.0,-0.94]}
+execute if entity @s[y_rotation=165..175] run data merge entity @e[type=creeper,tag=lob_creeper,limit=1,distance=..6] {Tags:["flying_creeper"],Motion:[-0.17,2.0,-0.98]}
