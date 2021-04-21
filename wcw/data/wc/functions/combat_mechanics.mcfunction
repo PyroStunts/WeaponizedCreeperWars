@@ -136,9 +136,3 @@ title @a[gamemode=survival,scores={StateCounter=100..}] title {"text":"WARNING",
 title @a[gamemode=survival,scores={StateCounter=100..}] subtitle {"text":"You will be eliminated if you travel more than 123 blocks from the center","color":"red"}
 execute as @a[gamemode=survival,scores={StateCounter=100..}] run playsound minecraft:ambient.cave master @s
 execute as @a[gamemode=survival,scores={StateCounter=100..}] run scoreboard players set @s StateCounter 0
-
-
-#Eliminate out of bounds
-title @a[gamemode=survival,x=0,y=128,z=0,distance=126..] title {"text":"OUT OF BOUNDS","color":"red"}
-title @a[gamemode=survival,x=0,y=128,z=0,distance=126..] subtitle {"text":"You have been eliminated","color":"green"}
-gamemode spectator @a[gamemode=survival,x=0,y=128,z=0,distance=126..]

@@ -18,4 +18,4 @@ function wc:combat_mechanics
 
 
 effect give @p[gamemode=survival,x=0,y=128,z=0,distance=123..] blindness 2
-gamemode spectator @p[gamemode=survival,x=0,y=128,z=0,distance=126..]
+#gamemode spectator @p[gamemode=survival,x=0,y=128,z=0,distance=126..]
