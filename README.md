@@ -1,5 +1,5 @@
 # Weaponized Creeper Wars
-## Minecraft Java Edition 1.16.5 Datapack 
+## Minecraft Java Edition 1.17 Datapack 
 
 Here is the datapack that my Minecraft mini-game server at wcw.mcstacker.net is using. I'm sharing it here for others to learn from. If you are new to datapacks and mcfunctions you might learn how easily vanilla mini-games can be created. You'll find lots of helpful comments in the code which explain a bit about what is going on.
 
