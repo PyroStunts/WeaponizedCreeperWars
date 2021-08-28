@@ -1,5 +1,6 @@
-#anvils normally cant be blown up so we have to remove them (especially for pummelers)
+#anvils and ender chests normally cant be blown up so we have to remove them (especially for pummelers)
 execute at @e[type=creeper] if block ~ ~-1 ~ minecraft:anvil run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 minecraft:air
+execute at @e[type=creeper] if block ~ ~-1 ~ minecraft:ender_chest run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 minecraft:air
 
 #creeper king
 execute at @a if block ~ ~ ~ minecraft:creeper_head if block ~ ~-1 ~ minecraft:slime_block run function wc:creeper_king

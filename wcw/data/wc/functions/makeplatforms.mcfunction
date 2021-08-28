@@ -36,6 +36,10 @@ fill -32 122 -97 -30 126 -95 minecraft:air replace
 fill 29 122 -97 31 126 -95 minecraft:air replace
 fill 79 122 -60 81 126 -58 minecraft:air replace
 
+
+#center ender chest and glass
+function wc:make_ender_chest
+
 scoreboard players set $fake SupplyDrop 400
 kill @e[type=item]
 
