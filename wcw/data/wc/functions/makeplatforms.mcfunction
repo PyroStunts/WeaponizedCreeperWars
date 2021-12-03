@@ -62,6 +62,11 @@ execute as @a[gamemode=spectator] run function wc:setup_player
 #have to schedule this function to give player enough time to pickup axe they were just teleported to
 schedule function wc:give_starting_items 2s
 
+#1.18 requires this to be done. "setworldspawn 0 255 0" in the setup function no longer works properly.
+#This is what takes players out of the game if they die from anything other than going out of bounds. 
+#For example explosions or fall damage
+spawnpoint @a 0 255 0
+
 #kill the items on other platforms that were not teleported to.
 kill @e[type=item,tag=!hasTeleportedTo]
 scoreboard players enable @a ResetMyScore
