@@ -1,0 +1,43 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "item",
+            "name": "minecraft:compass",
+            "functions": [
+              {
+                "function": "set_count",
+                "count": 1
+              },
+              {
+                "function": "set_nbt",
+                "tag": "{LodestoneDimension:\"minecraft:overworld\",LodestoneTracked:0b,LodestonePos:{X:0,Y:128,Z:0}}"
+              },
+              {
+                "function": "set_name",
+                "name": [
+                  {
+                    "text": "Ender Chest Finder",
+                    "color": "green",
+                    "italic": "false"
+                  }
+                ]
+              },
+              {
+                "function": "set_lore",
+                "lore": [
+                  {
+                    "text": "Locates the central Ender Chest",
+                    "color": "white",
+                    "italic": "false"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

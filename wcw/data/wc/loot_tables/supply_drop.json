@@ -83,8 +83,13 @@
 			 },
 			 {
 				"type":"minecraft:loot_table",
-				"weight":1,
+				"weight":2,
 				"name":"wc:teleport_orb"
+			 },
+			 {
+				"type":"minecraft:loot_table",
+				"weight":1,
+				"name":"wc:ender_chest_compass"
 			 }
 		  ]
 	   },
