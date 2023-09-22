@@ -10,9 +10,13 @@ execute if score $fake GameState matches 2 run function wc:countdown
 execute if score $fake GameState matches 4 run function wc:main_game
 execute if score $fake GameState matches 5 run function wc:winner_screen
 
+execute if score $fake GameState matches 1 if entity @p[gamemode=survival] run function adv:survival_game_state
+execute if score $fake GameState matches 1 if entity @p[gamemode=adventure] run function adv:adventure_game_state
+
+
 
 #teleport anyone who goes too far away back to the center.
-tp @p[gamemode=!creative,x=0,y=128,z=0,distance=200..] 0 128 0
+tp @p[gamemode=!adventure,gamemode=!creative,x=0,y=128,z=0,distance=200..] 0 128 0
 
 #Eliminate out of bounds
 execute at @a[gamemode=survival,x=0,y=128,z=0,distance=126..] run function wc:eliminate_oob

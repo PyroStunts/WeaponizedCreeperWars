@@ -8,7 +8,7 @@ execute unless score $fake PlayerCount matches 1 run tellraw @p[gamemode=surviva
 execute unless score $fake PlayerCount matches 1 run scoreboard players add @p[gamemode=survival] Wins 1
 execute if score $fake PlayerCount matches 1 run title @a title [{"text":"Everyone has left","color":"gold"}]
 
-kill @e[type=!player]
+kill @e[type=!player,type=!end_crystal]
 bossbar set minecraft:next_supply visible false
 scoreboard players set $fake GameState 5
 scoreboard players set $fake StateCounter 0

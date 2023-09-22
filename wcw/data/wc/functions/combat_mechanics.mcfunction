@@ -9,7 +9,7 @@ tp @e[type=slime,tag=creeper_king,scores={StateCounter=500..}] ~ -1 ~
 execute at @e[type=slime,tag=creeper_king] run particle flame ~ ~-2 ~ 2 2 2 1 5 force
 
 
-#ramapage creeper 5 seconds get away time
+#rampage creeper 5 seconds get away time
 scoreboard players add @e[type=creeper,tag=rampage] StateCounter 1
 execute as @e[type=creeper,tag=rampage,nbt={NoAI:1b},scores={StateCounter=100..}] run data merge entity @s {NoAI:0b,Tags:["rampage_active"]}
 #if this creeper exists spawn loads of creepers
@@ -28,11 +28,11 @@ execute as @e[type=creeper,tag=flying_creeper,nbt={OnGround:1b}] run data merge 
 
 
 #Amplifier:1b arrow on ground, summon rocket creeper
-execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:1b}]}] run summon firework_rocket ~ ~ ~ {LifeTime:80,Passengers:[{id:"minecraft:creeper",NoGravity:1b,Invulnerable:1b,ExplosionRadius:5b,Fuse:80,ignited:1b,Tags:["rocket_creeper"],ActiveEffects:[{Id:25b,Amplifier:4b,Duration:80}]}],FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:3,Trail:1b,Colors:[I;720658,2738448],FadeColors:[I;2780716,1606932]}]}}}}
-
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:1b}]}] run summon firework_rocket ~ ~ ~ {LifeTime:80,Passengers:[{id:"minecraft:creeper",NoGravity:1b,Invulnerable:1b,ExplosionRadius:5b,Fuse:80,ignited:1b,Tags:["rocket_creeper"],active_effects:[{id:"minecraft:levitation",amplifier:4b,duration:80}]}],FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:3,Trail:1b,Colors:[I;720658,2738448],FadeColors:[I;2780716,1606932]}]}}}}
 
 #launch rocket
-execute at @e[type=parrot] run summon firework_rocket ~ ~ ~ {LifeTime:80,Passengers:[{id:"minecraft:creeper",NoGravity:1b,Invulnerable:1b,ExplosionRadius:5b,Fuse:80,ignited:1b,Tags:["rocket_creeper"],ActiveEffects:[{Id:25b,Amplifier:4b,Duration:80}]}],FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:3,Trail:1b,Colors:[I;720658,2738448],FadeColors:[I;2780716,1606932]}]}}}}
+execute at @e[type=parrot] run summon firework_rocket ~ ~ ~ {LifeTime:80,Passengers:[{id:"minecraft:creeper",NoGravity:1b,Invulnerable:1b,ExplosionRadius:5b,Fuse:80,ignited:1b,Tags:["rocket_creeper"],active_effects:[{id:"minecraft:levitation",amplifier:4b,duration:80}]}],FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:3,Trail:1b,Colors:[I;720658,2738448],FadeColors:[I;2780716,1606932]}]}}}}
+
 execute as @e[type=creeper,tag=rocket_creeper] at @s unless block ~ ~2 ~ air run summon tnt ~ ~2 ~
 tp @e[type=parrot] ~ -10 ~
 kill @e[type=parrot]
@@ -51,17 +51,17 @@ kill @e[type=wolf]
 
 
 #Amplifier:101b on any creeper blows it up if hte arrow doesn't kill it first. Good for explding bomb creepers
-execute as @e[type=creeper,nbt={ActiveEffects:[{Amplifier:101b}]}] run data merge entity @s {Fuse:0}
+execute as @e[type=creeper,nbt={active_effects:[{amplifier:101b}]}] run data merge entity @s {Fuse:0}
 
 #Amplifier:101b arrow on ground, summon creeper
-execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:101b}]}] run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:10,ignited:1b}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:101b}]}] run summon creeper ~ ~ ~ {ExplosionRadius:2b,Fuse:10,ignited:1b}
 
 
 #air strike bats
 #Amplifier:102b arrow on ground, summon 3 bats
-execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:102b}]}] run summon bat ~ ~22 ~ {Invulnerable:1b,Tags:["bomber_bat"]}
-execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:102b}]}] run summon bat ~ ~22 ~ {Invulnerable:1b,Tags:["bomber_bat"]}
-execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:102b}]}] run summon bat ~ ~22 ~ {Invulnerable:1b,Tags:["bomber_bat"]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:102b}]}] run summon bat ~ ~22 ~ {Invulnerable:1b,Tags:["bomber_bat"]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:102b}]}] run summon bat ~ ~22 ~ {Invulnerable:1b,Tags:["bomber_bat"]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:102b}]}] run summon bat ~ ~22 ~ {Invulnerable:1b,Tags:["bomber_bat"]}
 
 
 scoreboard players add @e[type=bat,tag=bomber_bat] StateCounter 1
@@ -81,7 +81,7 @@ kill @e[type=bat,tag=tree_bat,scores={BatAge=500..}]
 
 
 #Amplifier:3b arrow on ground, summon pummeler
-execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:3b}]}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["pummel_creeper","pummel_from_arrow"],Attributes:[{Name:generic.follow_range,Base:1}]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:3b}]}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["pummel_creeper","pummel_from_arrow"],Attributes:[{Name:generic.follow_range,Base:1}]}
 
 #pummels 1 second after arrow lands
 scoreboard players set @e[type=creeper,tag=pummel_from_arrow] StateCounter 80
@@ -95,7 +95,7 @@ execute at @e[type=creeper,tag=pummel_creeper,scores={StateCounter=100..},nbt={O
 
 
 #Amplifier:4b on ground, summon chaser creeper
-execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:4b}]}] run summon creeper ~ ~ ~ {ExplosionRadius:6b,Health:100f,Tags:["chaser"],Attributes:[{Name:generic.max_health,Base:100},{Name:generic.movement_speed,Base:0.50},{Name:generic.follow_range,Base:40}]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:4b}]}] run summon creeper ~ ~ ~ {ExplosionRadius:6b,Health:100f,Tags:["chaser"],Attributes:[{Name:generic.max_health,Base:100},{Name:generic.movement_speed,Base:0.50},{Name:generic.follow_range,Base:40}]}
 
 
 #chaser creeper
@@ -103,7 +103,7 @@ scoreboard players add @e[type=creeper,tag=chaser,nbt={NoAI:1b}] StateCounter 1
 execute as @e[type=creeper,tag=chaser,nbt={NoAI:1b},scores={StateCounter=100..}] run data merge entity @s {NoAI:0b}
 
 #Amplifier:2b on ground, summon bomb creeper
-execute at @e[type=arrow,nbt={inGround:1b,CustomPotionEffects:[{Amplifier:2b}]}] run summon creeper ~ ~ ~ {Fuse:20,powered:1b,Tags:["creeper_bomb"],Attributes:[{Name:generic.follow_range,Base:1}]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:2b}]}] run summon creeper ~ ~ ~ {Fuse:20,powered:1b,Tags:["creeper_bomb"],Attributes:[{Name:generic.follow_range,Base:1}]}
 
 #bomb creeper
 scoreboard players add @e[type=creeper,tag=creeper_bomb] StateCounter 1
@@ -137,3 +137,6 @@ title @a[gamemode=survival,scores={StateCounter=100..}] title {"text":"WARNING",
 title @a[gamemode=survival,scores={StateCounter=100..}] subtitle {"text":"You will be eliminated if you travel more than 123 blocks from the center","color":"red"}
 execute as @a[gamemode=survival,scores={StateCounter=100..}] run playsound minecraft:ambient.cave master @s
 execute as @a[gamemode=survival,scores={StateCounter=100..}] run scoreboard players set @s StateCounter 0
+
+#If there is no ender crystal and the white teleporter exists, destroy all teleporters
+execute unless entity @e[type=minecraft:end_crystal] if block 100 120 0 minecraft:end_gateway run function wc:destroy_teleporters

@@ -1,0 +1,11 @@
+summon end_crystal 0 133 0 {ShowBottom:0b}
+setblock 100 120 0 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:-32,Y:124,Z:94}} replace 
+setblock 80 120 58 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:-82,Y:124,Z:57}} replace
+setblock 30 120 95 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:-101,Y:124,Z:-1}} replace
+setblock -31 120 95 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:-82,Y:124,Z:-60}} replace
+setblock -81 120 58 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:-32,Y:124,Z:-97}} replace
+setblock -100 120 0 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:29,Y:124,Z:-97}} replace
+setblock -81 120 -59 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:79,Y:124,Z:-60}} replace
+setblock -31 120 -96 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:99,Y:124,Z:-1}} replace
+setblock 30 120 -96 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:79,Y:124,Z:57}} replace
+setblock 80 120 -59 minecraft:end_gateway{ExactTeleport:1b,ExitPortal:{X:29,Y:124,Z:94}} replace

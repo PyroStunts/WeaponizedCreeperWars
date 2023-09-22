@@ -14,7 +14,7 @@ execute if entity @p[scores={SurvivalMode=1}] run function wc:single_player_surv
 
 
 
-function wc:combat_mechanics
+execute unless entity @p[gamemode=adventure] run function wc:combat_mechanics
 
 
 effect give @p[gamemode=survival,x=0,y=128,z=0,distance=123..] blindness 2

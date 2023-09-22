@@ -1,0 +1,2 @@
+execute if entity @e[type=glow_item_frame,limit=1,sort=nearest,nbt={ItemRotation:4b}] if block -164 135 -133 minecraft:warped_wall_sign unless block -164 136 -132 minecraft:air run function adv:break_beacon
+execute if entity @e[type=glow_item_frame,limit=1,sort=nearest,nbt={ItemRotation:0b}] if block -164 135 -133 minecraft:air unless block -164 136 -132 minecraft:air run function adv:change_beacon

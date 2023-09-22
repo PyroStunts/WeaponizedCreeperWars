@@ -51,7 +51,7 @@ scoreboard objectives add RulesAgree trigger
 scoreboard objectives add Apocalypse trigger
 
 scoreboard objectives add Wins dummy "Game Wins"
-scoreboard objectives setdisplay belowName Wins
+scoreboard objectives setdisplay below_name Wins
 scoreboard objectives setdisplay list Wins
 
 scoreboard objectives add SupplyDrop dummy "Supply Drop"

@@ -90,6 +90,36 @@
 				"type":"minecraft:loot_table",
 				"weight":1,
 				"name":"wc:ender_chest_compass"
+			 },
+			 {
+				"type":"minecraft:loot_table",
+				"weight":1,
+				"name":"adv:portal_compass"
+			 },
+			 {
+				"type":"minecraft:loot_table",
+				"weight":1,
+				"name":"adv:portal_map"
+			 },
+			 {
+				"type":"minecraft:loot_table",
+				"weight":1,
+				"name":"adv:clue_1"
+			 },
+			 {
+				"type":"minecraft:loot_table",
+				"weight":1,
+				"name":"adv:clue_2"
+			 },
+			 {
+				"type":"minecraft:loot_table",
+				"weight":1,
+				"name":"adv:clue_3"
+			 },
+			 {
+				"type":"minecraft:loot_table",
+				"weight":1,
+				"name":"adv:clue_4"
 			 }
 		  ]
 	   },

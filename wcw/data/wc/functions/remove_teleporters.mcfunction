@@ -1,0 +1,10 @@
+setblock 100 120 0 minecraft:air
+setblock 80 120 58 minecraft:air
+setblock 30 120 95 minecraft:air
+setblock -31 120 95 minecraft:air
+setblock -81 120 58 minecraft:air
+setblock -100 120 0 minecraft:air
+setblock -81 120 -59 minecraft:air
+setblock -31 120 -96 minecraft:air
+setblock 30 120 -96 minecraft:air
+setblock 80 120 -59 minecraft:air

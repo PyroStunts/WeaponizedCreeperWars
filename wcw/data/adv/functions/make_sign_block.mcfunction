@@ -1,0 +1,3 @@
+setblock -153 132 -315 minecraft:lime_stained_glass
+setblock -153 132 -316 warped_wall_sign[facing=north,waterlogged=false]{front_text:{color:"black",has_glowing_text:1b,messages:['{"text":"First","color":"gold","bold":true}','{"text":"player here.","color":"gold","bold":true}','{"text":"Screenshot ","color":"gold","bold":true}','{"text":"this.","color":"gold","bold":true}']}} replace
+setblock -153 133 -315 warped_sign[rotation=14,waterlogged=false]{front_text:{color:"black",has_glowing_text:0b,messages:['{"text":"Some day"}','{"text":"this could"}','{"text":"all be"}','{"text":"yours."}']}} replace

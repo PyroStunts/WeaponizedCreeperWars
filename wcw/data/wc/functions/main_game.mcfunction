@@ -33,3 +33,4 @@ execute if score $fake ApocalypseCount matches 1.. run scoreboard players add $f
 execute store result score $fake PlayerCount if entity @a[gamemode=survival]
 execute if score $fake PlayerCount matches 1 run function wc:game_over
 execute if score $fake PlayerCount matches 0 run scoreboard players set $fake GameState 1
+

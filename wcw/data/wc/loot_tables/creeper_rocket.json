@@ -9,7 +9,7 @@
 				"functions":[
 				   {
 					  "function":"set_nbt",
-					  "tag":"{EntityTag:{Silent:1b,ActiveEffects:[{Id:14b,Amplifier:1b,Duration:200,ShowParticles:0b}]}}"
+					  "tag":"{EntityTag:{Silent:1b,active_effects:[{id:\"minecraft:invisibility\",amplifier:1b,duration:200,show_particles:0b}]}}"
 				   },
 				   {
 					  "function":"set_name",
