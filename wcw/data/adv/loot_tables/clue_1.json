@@ -21,7 +21,7 @@
                   {
                     "text": "Mystery Clue 1",
                     "color": "green",
-                    "italic": "false"
+                    "italic": false
                   }
                 ]
               },
@@ -31,7 +31,7 @@
                   {
                     "text": "It's of no use to you now. Save it for yourself for later.",
                     "color": "white",
-                    "italic": "false"
+                    "italic": false
                   }
                 ]
               }

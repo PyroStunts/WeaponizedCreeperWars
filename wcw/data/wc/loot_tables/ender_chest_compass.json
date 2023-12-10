@@ -21,7 +21,7 @@
                   {
                     "text": "Ender Chest Finder",
                     "color": "green",
-                    "italic": "false"
+                    "italic": false
                   }
                 ]
               },
@@ -31,7 +31,7 @@
                   {
                     "text": "Locates the central Ender Chest",
                     "color": "white",
-                    "italic": "false"
+                    "italic": false
                   }
                 ]
               }
