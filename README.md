@@ -47,7 +47,6 @@ enable-rcon=true
 sync-chunk-writes=true
 op-permission-level=4
 prevent-proxy-connections=false
-resource-pack=
 entity-broadcast-range-percentage=100
 player-idle-timeout=0
 rcon.password=YOUROWNPASSWORD
@@ -65,6 +64,8 @@ text-filtering-config=
 spawn-monsters=true
 enforce-whitelist=false
 spawn-protection=0
+require-resource-pack=false
+resource-pack=https\://wcw.mcstacker.net/WCW_Resource_Pack.zip?ver\=1
 resource-pack-sha1=
 max-world-size=29999984
 ```
