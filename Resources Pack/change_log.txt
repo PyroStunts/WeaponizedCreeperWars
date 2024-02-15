@@ -1,0 +1,31 @@
+1.0
+	Added
+		Grenade Texture
+		Alt Grenade Texture
+		Creeper Rocket Texture
+		Creeper Bomb Texture
+		Pummeler Texture
+		Chaser Creeper Texture
+		Reveal Texture
+		Slime Safety Platform Texture
+		Projectile Shield Texture
+		Jail Trap Texture
+		Tipped Arrow Texture
+		Alt Tipped Arrow Texture
+		
+1.1
+	Added
+		Alt Folders
+		Change Log
+		Alt Teleport Orb Texture
+		Tipped Arrow Entity Texture
+		Rampage Creeper Texture
+		Alt Tipped Arrow Entity Texture
+
+	Changed
+		Moved all alt textures from the project folder to the alt folders
+		Creeper Rocket Texture
+
+1.2
+	Changed
+	update pack and reformat

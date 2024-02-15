@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "wcw:item/creeper_rocket",
+        "layer1": "wcw:item/creeper_rocket_overlay"
+    }
+}

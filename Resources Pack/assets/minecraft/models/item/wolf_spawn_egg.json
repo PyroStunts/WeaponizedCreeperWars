@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "wcw:item/reveal",
+        "layer1": "wcw:item/reveal_overlay"
+    }
+}

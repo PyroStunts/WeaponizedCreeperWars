@@ -1,11 +1,14 @@
 # Weaponized Creeper Wars
-## Minecraft Java Edition 1.20.2 Datapack 
+## Minecraft Java Edition 1.20.3/1.20.4 Datapack
 
 Here is the datapack that my Minecraft mini-game server at wcw.mcstacker.net is using. I'm sharing it here for others to learn from. If you are new to datapacks and mcfunctions you might learn how easily vanilla mini-games can be created. You'll find lots of helpful comments in the code which explain a bit about what is going on.
 
 Some of the commands used in this datapack were created on my Minecraft Command Generator at https://mcstacker.net .
 
 I have a website that explains the game here https://wcw.mcstacker.net 
+
+## Contributions
+Loweredgames (https://github.com/Loweredgames)
 
 #### Getting Started
 1. Setup a Vanilla Server with a Void world
