@@ -25,3 +25,7 @@
 	Changed
 		Moved all alt textures from the project folder to the alt folders
 		Creeper Rocket Texture
+
+1.2
+	Changed
+	update pack and reformat
