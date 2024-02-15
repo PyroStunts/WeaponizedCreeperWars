@@ -6,13 +6,18 @@
 #4 in game
 #5 1 player left - Game Over (5 seconds) then back to Game State #1
 execute if score $fake GameState matches 1 run function wc:wait_for_two_players
-execute if score $fake GameState matches 2 run function wc:countdown 
+execute if score $fake GameState matches 2 run function wc:countdown
 execute if score $fake GameState matches 4 run function wc:main_game
 execute if score $fake GameState matches 5 run function wc:winner_screen
 
 execute if score $fake GameState matches 1 if entity @p[gamemode=survival] run function adv:survival_game_state
 execute if score $fake GameState matches 1 if entity @p[gamemode=adventure] run function adv:adventure_game_state
 
+#join player world
+scoreboard objectives add Join minecraft.custom:minecraft.play_time
+scoreboard players add @a Join 1
+execute as @a[scores={Join=1}] run gamemode spectator @s
+execute as @a[scores={Join=5}] run tellraw @p[scores={Join=5}] {"text":"Run: /function wc:setup","color":"gold"}
 
 
 #teleport anyone who goes too far away back to the center.

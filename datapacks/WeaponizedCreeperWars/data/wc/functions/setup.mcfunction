@@ -20,7 +20,7 @@ bossbar set minecraft:next_supply color green
 bossbar set minecraft:next_supply max 800
 
 time set noon
-#gamerule doDaylightCycle true
+gamerule doDaylightCycle true
 gamerule doWeatherCycle false
 gamerule commandBlockOutput false
 gamerule doImmediateRespawn true
