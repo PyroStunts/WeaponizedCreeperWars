@@ -11,7 +11,7 @@ execute at @p[limit=1,x_rotation=..45] run function wc:low_arc_creeper
 data merge entity @e[limit=1,tag=flying_creeper,nbt={OnGround:1b}] {ExplosionRadius:5b,Fuse:2,ignited:1b}
 
 #launch rocket
-execute at @e[type=parrot] run summon firework_rocket ~ ~ ~ {LifeTime:80,Passengers:[{id:"minecraft:creeper",NoGravity:1b,ExplosionRadius:5b,Fuse:80,ignited:1b}],FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:3,Trail:1b,Colors:[I;720658,2738448],FadeColors:[I;2780716,1606932]}]}}}}
+execute at @e[type=parrot] run summon firework_rocket ~ ~ ~ {LifeTime:80,Passengers:[{id:"minecraft:creeper",NoGravity:1b,ExplosionRadius:5b,Fuse:80,ignited:1b}],FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:3,Trail:1b,Colors:[I;720658,2738448],FadeColors:[I;2780716,1606932]}]}}}}
 tp @e[type=parrot] ~ -10 ~
 kill @e[type=parrot]
 

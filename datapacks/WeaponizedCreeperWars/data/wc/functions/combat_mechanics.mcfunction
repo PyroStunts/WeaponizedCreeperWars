@@ -44,7 +44,7 @@ execute as @e[type=trident,nbt={inGround:1b}] at @s at @p[gamemode=survival,sort
 
 #Reveal players
 execute if entity @e[type=wolf] run effect give @a minecraft:glowing 10 1
-execute if entity @e[type=wolf] at @a[gamemode=survival] run summon firework_rocket ~ ~ ~ {LifeTime:60,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:3,Flicker:1b,Trail:1b,Colors:[I;1769216,7339804,2721537],FadeColors:[I;90388,1604134,5350170]}]}}}}
+execute if entity @e[type=wolf] at @a[gamemode=survival] run summon firework_rocket ~ ~ ~ {LifeTime:60,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:3,Flicker:1b,Trail:1b,Colors:[I;1769216,7339804,2721537],FadeColors:[I;90388,1604134,5350170]}]}}}}
 execute at @e[type=wolf] run teleport @p ~ ~ ~ facing entity @p[gamemode=survival,distance=5..]
 tp @e[type=wolf] ~ -10 ~
 kill @e[type=wolf]
@@ -81,7 +81,7 @@ kill @e[type=bat,tag=tree_bat,scores={BatAge=500..}]
 
 
 #Amplifier:3b arrow on ground, summon pummeler
-execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:3b}]}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["pummel_creeper","pummel_from_arrow"],Attributes:[{Name:generic.follow_range,Base:1}]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:3b}]}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["pummel_creeper","pummel_from_arrow"],Attributes:[{Name:"generic.follow_range",Base:1}]}
 
 #pummels 1 second after arrow lands
 scoreboard players set @e[type=creeper,tag=pummel_from_arrow] StateCounter 80
@@ -95,7 +95,7 @@ execute at @e[type=creeper,tag=pummel_creeper,scores={StateCounter=100..},nbt={O
 
 
 #Amplifier:4b on ground, summon chaser creeper
-execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:4b}]}] run summon creeper ~ ~ ~ {ExplosionRadius:6b,Health:100f,Tags:["chaser"],Attributes:[{Name:generic.max_health,Base:100},{Name:generic.movement_speed,Base:0.50},{Name:generic.follow_range,Base:40}]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:4b}]}] run summon creeper ~ ~ ~ {ExplosionRadius:6b,Health:100f,Tags:["chaser"],Attributes:[{Name:"generic.max_health",Base:100},{Name:"generic.movement_speed",Base:0.50},{Name:"generic.follow_range",Base:40}]}
 
 
 #chaser creeper
@@ -103,7 +103,7 @@ scoreboard players add @e[type=creeper,tag=chaser,nbt={NoAI:1b}] StateCounter 1
 execute as @e[type=creeper,tag=chaser,nbt={NoAI:1b},scores={StateCounter=100..}] run data merge entity @s {NoAI:0b}
 
 #Amplifier:2b on ground, summon bomb creeper
-execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:2b}]}] run summon creeper ~ ~ ~ {Fuse:20,powered:1b,Tags:["creeper_bomb"],Attributes:[{Name:generic.follow_range,Base:1}]}
+execute at @e[type=arrow,nbt={inGround:1b,custom_potion_effects:[{amplifier:2b}]}] run summon creeper ~ ~ ~ {Fuse:20,powered:1b,Tags:["creeper_bomb"],Attributes:[{Name:"generic.follow_range",Base:1}]}
 
 #bomb creeper
 scoreboard players add @e[type=creeper,tag=creeper_bomb] StateCounter 1
