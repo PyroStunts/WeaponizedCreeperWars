@@ -13,6 +13,7 @@ setworldspawn 0 255 0
 
 
 gamemode spectator @a
+recipe give @a *
 
 bossbar add next_supply {"text":"Next Supply Drop","color":"green"}
 bossbar set minecraft:next_supply color green
