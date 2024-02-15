@@ -1,0 +1,13 @@
+{
+  "pack": {
+    "pack_format": 22,
+	"supported_formats": {"min_inclusive": 22, "max_inclusive": 26},
+    "description": [
+			"",
+			{"text":"Offical WCW Resource Pack\n"},
+			{"text":"Created by ", "color": "white"},{"text":"Chlo","color":"green"},{"text":"Radium","color":"dark_green"}
+		],
+		"version": "1.2",
+		"author": "ChloRadium"
+  }
+}
