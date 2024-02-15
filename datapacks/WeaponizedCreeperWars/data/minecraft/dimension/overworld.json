@@ -3,7 +3,7 @@
   "generator": {
     "type": "minecraft:flat",
     "settings": {
-      "biome": "minecraft:snowy_taiga",
+      "biome": "minecraft:plains",
       "lakes": false,
       "features": true,
       "layers": [
