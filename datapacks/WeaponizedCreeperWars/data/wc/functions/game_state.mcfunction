@@ -18,6 +18,7 @@ scoreboard objectives add Join minecraft.custom:minecraft.play_time
 scoreboard players add @a Join 1
 execute as @a[scores={Join=1}] run gamemode spectator @s
 execute as @a[scores={Join=5}] run tellraw @p[scores={Join=5}] {"text":"Run: /function wc:setup","color":"gold"}
+execute as @a[scores={Join=10000..}] run scoreboard players set @p Join 100
 
 
 #teleport anyone who goes too far away back to the center.
