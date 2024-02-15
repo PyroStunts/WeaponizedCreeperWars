@@ -7,6 +7,9 @@ Some of the commands used in this datapack were created on my Minecraft Command 
 
 I have a website that explains the game here https://wcw.mcstacker.net 
 
+## Contributions
+Loweredgames (https://github.com/Loweredgames)
+
 #### Getting Started
 1. Setup a Vanilla Server with a Void world
 2. Put the datapack in the datapacks folder
