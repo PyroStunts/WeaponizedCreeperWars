@@ -1,38 +1,46 @@
 {
-	"pools":[
-		{
-			"rolls": 1,
-			"entries":[
-				{
-				"type":"item",
-				"name":"minecraft:trident",
-				"functions":[
-				   {
-					  "function":"set_name",
-					  "name":[
-						 {
-							"text":"Jail Trap",
-							"color":"green","italic":false
-						 }
-					  ]
-				   },
-				   {
-					  "function":"set_lore",
-					  "lore":[
-						 {
-							"text":"Throw to set a jail trap. Players who go within 5 blocks of the",
-							"color":"white","italic":false
-						 },
-						 {
-							"text":"trap will be imprisoned with 10 seconds of mining fatigue.",
-							"color":"white","italic":false
-						 }
-					  ]
-				   }
+	"pools": [
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "item",
+			"weight": 1,
+			"name": "minecraft:trident",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  },
+			  {
+				"function": "set_name",
+				"name": [
+				  {
+					"color": "green",
+					"italic": false,
+					"text": "Jail Trap"
+				  }
 				]
-			 }
+			  },
+			  {
+				"function": "set_lore",
+				"lore": [
+				  {
+					"color": "white",
+					"italic": false,
+					"text": "Throw to set a jail trap. Players who go within 5 blocks of the"
+				  },
+				  {
+					"color": "white",
+					"italic": false,
+					"text": "trap will be imprisoned with 10 seconds of mining fatigue."
+				  }
+				],
+				"mode": "append"
+			  }
 			]
-		}
+		  }
+		]
+	  }
 	]
-}
-
+  }

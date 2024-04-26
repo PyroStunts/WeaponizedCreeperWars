@@ -1,43 +1,57 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "item",
-            "name": "minecraft:compass",
-            "functions": [
-              {
-                "function": "set_count",
-                "count": 1
-              },
-              {
-                "function": "set_nbt",
-                "tag": "{LodestoneDimension:\"minecraft:overworld\",LodestoneTracked:0b,LodestonePos:{X:0,Y:128,Z:0}}"
-              },
-              {
-                "function": "set_name",
-                "name": [
-                  {
-                    "text": "Ender Chest Finder",
-                    "color": "green",
-                    "italic": false
-                  }
-                ]
-              },
-              {
-                "function": "set_lore",
-                "lore": [
-                  {
-                    "text": "Locates the central Ender Chest",
-                    "color": "white",
-                    "italic": false
-                  }
-                ]
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:compass",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:lodestone_tracker": {
+                  "target": {
+                    "dimension": "minecraft:overworld",
+                    "pos": [
+                      0,
+                      128,
+                      0
+                    ]
+                  },
+                  "tracked": false
+                }
               }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "green",
+                  "italic": false,
+                  "text": "Ender Chest Finder"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "white",
+                  "italic": false,
+                  "text": "Locates the central Ender Chest"
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,38 +1,46 @@
 {
-	"pools":[
-		{
-			"rolls": 1,
-			"entries":[
-				{
-				"type":"item",
-				"name":"minecraft:egg",
-				"functions":[
-				   {
-					  "function":"set_name",
-					  "name":[
-						 {
-							"text":"Slime Safety Platform",
-							"color":"green","italic":false
-						 }
-					  ]
-				   },
-				   {
-					  "function":"set_lore",
-					  "lore":[
-						 {
-							"text":"Look down and throw the egg when you are ",
-							"color":"white","italic":false
-						 },
-						 {
-							"text":"falling to deploy the slime safety platform.",
-							"color":"white","italic":false
-						 }
-					  ]
-				   }
+	"pools": [
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "item",
+			"weight": 1,
+			"name": "minecraft:egg",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  },
+			  {
+				"function": "set_name",
+				"name": [
+				  {
+					"color": "green",
+					"italic": false,
+					"text": "Slime Safety Platform"
+				  }
 				]
-			 }
+			  },
+			  {
+				"function": "set_lore",
+				"lore": [
+				  {
+					"color": "white",
+					"italic": false,
+					"text": "Look down and throw the egg when you are "
+				  },
+				  {
+					"color": "white",
+					"italic": false,
+					"text": "falling to deploy the slime safety platform."
+				  }
+				],
+				"mode": "append"
+			  }
 			]
-		}
+		  }
+		]
+	  }
 	]
-}
-
+  }

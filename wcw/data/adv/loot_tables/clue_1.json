@@ -1,43 +1,53 @@
 {
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "item",
-            "name": "minecraft:written_book",
-            "functions": [
-              {
-                "function": "set_count",
-                "count": 1
-              },
-              {
-                "function": "set_nbt",
-                "tag": "{title:\"Mystery Clue 1\",author:\"PyroStunts\",pages:['{\"text\":\"The altitude is 46.\"}']}"
-              },
-              {
-                "function": "set_name",
-                "name": [
-                  {
-                    "text": "Mystery Clue 1",
-                    "color": "green",
-                    "italic": false
-                  }
-                ]
-              },
-              {
-                "function": "set_lore",
-                "lore": [
-                  {
-                    "text": "It's of no use to you now. Save it for yourself for later.",
-                    "color": "white",
-                    "italic": false
-                  }
-                ]
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:written_book_content": {
+                  "title": "Mystery Clue 1",
+                  "author": "PyroStunts",
+                  "pages": [
+                    "{\"text\":\"The altitude is 46.\"}"
+                  ]
+                }
               }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "color": "green",
+                  "italic": false,
+                  "text": "Mystery Clue 1"
+                }
+              ]
+            },
+            {
+              "function": "set_lore",
+              "lore": [
+                {
+                  "color": "white",
+                  "italic": false,
+                  "text": "It's of no use to you now. Save it for yourself for later."
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,204 +1,310 @@
 {
-	"pools":[
-	   {
-		  "rolls":3,
-		  "entries":[
-			 {
-				"type":"minecraft:loot_table",
-				"weight":7,
-				"name":"wc:grenade",
-				"functions":[
-				   {
-					  "function":"set_count",
-					  "count":{
-						 "min":1,
-						 "max":3
-					  }
-				   }
-				]
-			 },
-
-			 {
-				"type":"minecraft:loot_table",
-				"weight":2,
-				"name":"wc:pummeler"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":2,
-				"name":"wc:creeper_rocket",
-				"functions":[
-				   {
-					  "function":"set_count",
-					  "count":{
-						  "min":1,
-						  "max":2
-					  }
-				   }
-				]
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":2,
-				"name":"wc:creeper_bomb",
-				"functions":[
-				   {
-					  "function":"set_count",
-					  "count":{
-						 "min":1,
-						 "max":2
-					  }
-				   }
-				]
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"wc:chaser_creeper"
-			 }
-		  ]
-	   },
-	   {
-		  "rolls":1,
-		  "entries":[
-			{
-				"type":"minecraft:loot_table",
-				"weight":3,
-				"name":"wc:reveal"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":2,
-				"name":"wc:slime_safety_platform"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":3,
-				"name":"wc:projectile_shield"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"wc:jail_trap"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":2,
-				"name":"wc:teleport_orb"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"wc:ender_chest_compass"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"adv:portal_compass"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"adv:portal_map"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"adv:clue_1"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"adv:clue_2"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"adv:clue_3"
-			 },
-			 {
-				"type":"minecraft:loot_table",
-				"weight":1,
-				"name":"adv:clue_4"
-			 }
-		  ]
-	   },
-	   {
-		   "rolls":2,
-		   "entries":[
-				{
-					"type":"minecraft:loot_table",
-					"weight":2,
-					"name":"wc:creeper_arrow",
-					"functions":[
-					{
-						"function":"set_count",
-						"count":{
-							"min":1,
-							"max":6
-						}
-					}
-					]
-				},
-				{
-					"type":"minecraft:loot_table",
-					"weight":1,
-					"name":"wc:air_strike_arrow"
-				 },
-				 {
-					"type":"minecraft:loot_table",
-					"weight":1,
-					"name":"wc:pummeler_arrow"
-				 },
-				 {
-					"type":"minecraft:loot_table",
-					"weight":1,
-					"name":"wc:chaser_creeper_arrow"
-				 },
-				 {
-					"type":"minecraft:loot_table",
-					"weight":2,
-					"name":"wc:creeper_bomb_arrow",
-					"functions":[
-					   {
-						  "function":"set_count",
-						  "count":{
-							 "min":1,
-							 "max":3
-						  }
-					   }
-					]
-				 },
-				 {
-					"type":"minecraft:loot_table",
-					"weight":2,
-					"name":"wc:creeper_rocket_arrow",
-					"functions":[
-					   {
-						  "function":"set_count",
-						  "count":{
-							 "min":1,
-							 "max":3
-						  }
-					   }
-					]
-				 }
+	"pools": [
+	  {
+		"rolls": 3,
+		"entries": [
+		  {
+			"type": "loot_table",
+			"weight": 7,
+			"value": "wc:grenade",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 3
+				}
+			  }
 			]
-		},
-		{
-			"rolls":1,
-			"entries":[
-				{
-					"type":"empty",
-					"weight":10
-				},
-			   	{
-				  "type":"minecraft:loot_table",
-				  "weight":1,
-				  "name":"wc:rampage_creeper"
-			   }
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:pummeler",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
 			]
-		 }
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_rocket",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 2
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_bomb",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 2
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:chaser_creeper",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "loot_table",
+			"weight": 3,
+			"value": "wc:reveal",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:slime_safety_platform",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 3,
+			"value": "wc:projectile_shield",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:jail_trap",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:teleport_orb",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:ender_chest_compass",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "adv:portal_compass",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "adv:portal_map",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "adv:clue_1",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "adv:clue_2",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "adv:clue_3",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "adv:clue_4",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"rolls": 2,
+		"entries": [
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 6
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:air_strike_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:pummeler_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:chaser_creeper_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_bomb_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 3
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_rocket_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 3
+				}
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "empty",
+			"weight": 10
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:rampage_creeper",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  }
+		]
+	  }
 	]
- }
-
+  }

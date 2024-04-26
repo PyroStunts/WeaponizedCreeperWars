@@ -1,42 +1,63 @@
 {
-	"pools":[
-		{
-			"rolls": 1,
-			"entries":[
-				{
-					"type":"item",
-					"name":"minecraft:tipped_arrow",
-					"functions":[
-					   {
-						  "function":"set_nbt",
-						  "tag":"{custom_potion_effects:[{id:\"minecraft:haste\",amplifier:4b,duration:2}],HideFlags:32,CustomPotionColor:16018197,CustomModelData:4}"
-					   },
-					   {
-						  "function":"set_name",
-						  "name":[
-							 {
-								"text":"Chaser Creeper Arrow",
-								"color":"green","italic":false
-							 }
-						  ]
-					   },
-					   {
-						  "function":"set_lore",
-						  "lore":[
-							 {
-								"text":"Summons a Chaser Creeper on impact with a block.",
-								"color":"white","italic":false
-							 },
-							 {
-								"text":"Explosion Radius 6.",
-								"color":"red","italic":false
-							 }
-						  ]
-					   }
+	"pools": [
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "item",
+			"weight": 1,
+			"name": "minecraft:tipped_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  },
+			  {
+				"function": "set_components",
+				"components": {
+				  "minecraft:custom_model_data": 4,
+				  "minecraft:hide_additional_tooltip": {},
+				  "minecraft:potion_contents": {
+					"custom_color": 16018197,
+					"custom_effects": [
+					  {
+						"id": "minecraft:haste",
+						"amplifier": 4,
+						"duration": 2
+					  }
 					]
-				 }
+				  }
+				}
+			  },
+			  {
+				"function": "set_name",
+				"name": [
+				  {
+					"color": "green",
+					"italic": false,
+					"text": "Chaser Creeper Arrow"
+				  }
+				]
+			  },
+			  {
+				"function": "set_lore",
+				"lore": [
+				  {
+					"color": "white",
+					"italic": false,
+					"text": "Summons a Chaser Creeper on impact with a block."
+				  },
+				  {
+					"color": "red",
+					"italic": false,
+					"text": "Explosion Radius 6."
+				  }
+				],
+				"mode": "append"
+			  }
 			]
-		}
+		  }
+		]
+	  }
 	]
-}
-
+  }

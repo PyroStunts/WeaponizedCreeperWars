@@ -4,7 +4,7 @@ function wc:combat_mechanics
 execute at @e[type=creeper,tag=supply_drop,nbt={OnGround:0b}] run particle lava ~ ~ ~ 1 10 1 0 1 normal
 scoreboard players add $fake SupplyDrop 1
 
-#tripples frequency of supply drop in Apolayspe node
+#tripples frequency of supply drop in Apocalypse node
 execute if score $fake ApocalypseCount matches 6000.. run scoreboard players add $fake SupplyDrop 2
 
 #the match tick counter

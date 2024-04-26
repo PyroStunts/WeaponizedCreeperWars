@@ -17,16 +17,19 @@ scoreboard players set $fake SupplyDrop 400
 
 
 #The item is summoned at each platform so that it can be
-summon item 99 124 -1 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"white"}}}
-summon item 79 124 57 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"orange"}}}
-summon item 29 124 94 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"magenta"}}}
-summon item -32 124 94 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"light_blue"}}}
-summon item -82 124 57 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"yellow"}}}
-summon item -101 124 -1 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"lime"}}}
-summon item -82 124 -60 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"pink"}}}
-summon item -32 124 -97 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"cyan"}}}
-summon item 29 124 -97 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"brown"}}}
-summon item 79 124 -60 {Item:{id:"minecraft:diamond_axe",Count:1b,tag:{Unbreakable:1b,StartBase:"red"}}}
+summon item 99 124 -1 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"white"}}}}
+summon item 79 124 57 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"orange"}}}}
+summon item 29 124 94 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"magenta"}}}}
+summon item -32 124 94 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"light_blue"}}}}
+summon item -82 124 57 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"yellow"}}}}
+summon item -101 124 -1 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"lime"}}}}
+summon item -82 124 -60 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"pink"}}}}
+summon item -32 124 -97 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"cyan"}}}}
+summon item 29 124 -97 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"brown"}}}}
+summon item 79 124 -60 {Item:{id:"minecraft:diamond_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_data":{StartBase:"red"}}}}
+
+
+
 gamemode spectator @a[gamemode=!creative]
 
 #players are processed one after the other

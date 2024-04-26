@@ -1,4 +1,3 @@
-#give @p shulker_box{BlockEntityTag:{Items:[{Slot:0b,id:"minecraft:red_concrete",Count:64b},{Slot:1b,id:"minecraft:cyan_concrete",Count:64b},{Slot:2b,id:"minecraft:lime_concrete",Count:64b},{Slot:3b,id:"minecraft:pink_concrete",Count:64b},{Slot:4b,id:"minecraft:brown_concrete",Count:64b},{Slot:5b,id:"minecraft:white_concrete",Count:64b},{Slot:6b,id:"minecraft:orange_concrete",Count:64b},{Slot:7b,id:"minecraft:yellow_concrete",Count:64b},{Slot:8b,id:"minecraft:magenta_concrete",Count:64b},{Slot:9b,id:"minecraft:light_blue_concrete",Count:64b}]}} 1
 setblock -56 47 -68 white_concrete 
 setblock -54 47 -68 orange_concrete 
 setblock -52 47 -68 magenta_concrete 
