@@ -10,5 +10,5 @@ execute if score $fake PlayerCount matches 1 run title @a title [{"text":"Everyo
 
 kill @e[type=!player,type=!end_crystal]
 bossbar set minecraft:next_supply visible false
-scoreboard players set $fake GameState 5
+scoreboard players set $fake GameState 6
 scoreboard players set $fake StateCounter 0

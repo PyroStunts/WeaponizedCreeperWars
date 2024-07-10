@@ -46,6 +46,8 @@ spawnpoint @a 0 255 0
 #kill the items on other platforms that were not teleported to.
 kill @e[type=item,tag=!hasTeleportedTo]
 scoreboard players enable @a ResetMyScore
+scoreboard players enable @a VoteCube
+scoreboard players set @a VoteCube 0
 effect give @a minecraft:saturation 240000 1 true
 bossbar set minecraft:next_supply players @a
 bossbar set minecraft:next_supply visible true

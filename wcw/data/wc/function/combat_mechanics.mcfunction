@@ -82,7 +82,7 @@ kill @e[type=bat,tag=tree_bat,scores={BatAge=500..}]
 
 
 #Amplifier:3b arrow on ground, summon pummeler
-execute at @e[type=arrow,nbt={inGround:1b,item:{components:{"minecraft:potion_contents":{custom_effects:[{amplifier:3b}]}}}}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["pummel_creeper","pummel_from_arrow"],Attributes:[{Name:generic.follow_range,Base:1}]}
+execute at @e[type=arrow,nbt={inGround:1b,item:{components:{"minecraft:potion_contents":{custom_effects:[{amplifier:3b}]}}}}] run summon creeper ~ ~ ~ {Invulnerable:1b,Tags:["pummel_creeper","pummel_from_arrow"],attributes:[{id:"minecraft:generic.follow_range",base:1}]}
 
 #pummels 1 second after arrow lands
 scoreboard players set @e[type=creeper,tag=pummel_from_arrow] StateCounter 80
@@ -96,7 +96,7 @@ execute at @e[type=creeper,tag=pummel_creeper,scores={StateCounter=100..},nbt={O
 
 
 #Amplifier:4b on ground, summon chaser creeper
-execute at @e[type=arrow,nbt={inGround:1b,item:{components:{"minecraft:potion_contents":{custom_effects:[{amplifier:4b}]}}}}] run summon creeper ~ ~ ~ {ExplosionRadius:6b,Health:100f,Tags:["chaser"],Attributes:[{Name:generic.max_health,Base:100},{Name:generic.movement_speed,Base:0.50},{Name:generic.follow_range,Base:40}]}
+execute at @e[type=arrow,nbt={inGround:1b,item:{components:{"minecraft:potion_contents":{custom_effects:[{amplifier:4b}]}}}}] run summon creeper ~ ~ ~ {ExplosionRadius:6b,Health:100f,Tags:["chaser"],attributes:[{id:"minecraft:generic.max_health",base:100},{id:"minecraft:generic.movement_speed",base:0.50},{id:"minecraft:generic.follow_range",base:40}]}
 
 
 #chaser creeper
@@ -104,7 +104,7 @@ scoreboard players add @e[type=creeper,tag=chaser,nbt={NoAI:1b}] StateCounter 1
 execute as @e[type=creeper,tag=chaser,nbt={NoAI:1b},scores={StateCounter=100..}] run data merge entity @s {NoAI:0b}
 
 #Amplifier:2b on ground, summon bomb creeper
-execute at @e[type=arrow,nbt={inGround:1b,item:{components:{"minecraft:potion_contents":{custom_effects:[{amplifier:2b}]}}}}] run summon creeper ~ ~ ~ {Fuse:20,powered:1b,Tags:["creeper_bomb"],Attributes:[{Name:generic.follow_range,Base:1}]}
+execute at @e[type=arrow,nbt={inGround:1b,item:{components:{"minecraft:potion_contents":{custom_effects:[{amplifier:2b}]}}}}] run summon creeper ~ ~ ~ {Fuse:20,powered:1b,Tags:["creeper_bomb"],attributes:[{id:"minecraft:generic.follow_range",base:1}]}
 
 #bomb creeper
 scoreboard players add @e[type=creeper,tag=creeper_bomb] StateCounter 1

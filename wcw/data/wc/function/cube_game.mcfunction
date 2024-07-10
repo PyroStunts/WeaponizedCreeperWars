@@ -2,17 +2,19 @@ function wc:combat_mechanics
 
 #supply drop
 execute at @e[type=creeper,tag=supply_drop,nbt={OnGround:0b}] run particle lava ~ ~ ~ 1 10 1 0 1 normal
-scoreboard players add $fake SupplyDrop 1
+#CUBE CHANGE drop is twice as frequent
+scoreboard players add $fake SupplyDrop 2
 
-#tripples frequency of supply drop in Apocalypse node
-execute if score $fake ApocalypseCount matches 6000.. run scoreboard players add $fake SupplyDrop 2
+#add one more to speed it up.
+execute if score $fake ApocalypseCount matches 6000.. run scoreboard players add $fake SupplyDrop 1
 
 #the match tick counter
 scoreboard players add $fake StateCounter 1
 
 #deploy supply drop, do boss bar
-execute if score $fake SupplyDrop matches 800.. if score $fake ApocalypseCount matches ..5999 run function wc:deploy_supply_drop
-execute if score $fake SupplyDrop matches 800.. if score $fake ApocalypseCount matches 6000.. run function wc:deploy_lethal_supply_drop
+#CUBE CHANGE
+execute if score $fake SupplyDrop matches 800.. if score $fake ApocalypseCount matches ..5999 run function wc:deploy_supply_drop_cube_arena
+execute if score $fake SupplyDrop matches 800.. if score $fake ApocalypseCount matches 6000.. run function wc:deploy_lethal_supply_drop_cube_arena
 execute store result bossbar minecraft:next_supply value run scoreboard players get $fake SupplyDrop
 
 
@@ -30,7 +32,7 @@ scoreboard players set @p[scores={Apocalypse=1}] Apocalypse 0
 execute if score $fake ApocalypseCount matches 1.. run scoreboard players add $fake ApocalypseCount 1
 
 #check for winner
-execute store result score $fake PlayerCount if entity @a[gamemode=survival]
-execute if score $fake PlayerCount matches 1 run function wc:game_over
+execute store result score $fake PlayerCount if entity @a[gamemode=adventure]
+execute if score $fake PlayerCount matches 1 run function wc:game_over_cube_game
 execute if score $fake PlayerCount matches 0 run scoreboard players set $fake GameState 1
 

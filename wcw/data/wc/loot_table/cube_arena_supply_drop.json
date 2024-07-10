@@ -1,0 +1,200 @@
+{
+	"pools": [
+	  {
+		"rolls": 3,
+		"entries": [
+		  {
+			"type": "loot_table",
+			"weight": 7,
+			"value": "wc:grenade",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 3
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:pummeler",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_rocket",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 2
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_bomb",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 2
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:chaser_creeper",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "loot_table",
+			"weight": 3,
+			"value": "wc:reveal",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:teleport_orb",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"rolls": 2,
+		"entries": [
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 6
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:air_strike_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:pummeler_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:chaser_creeper_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_bomb_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 3
+				}
+			  }
+			]
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 2,
+			"value": "wc:creeper_rocket_arrow",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": {
+				  "min": 1,
+				  "max": 3
+				}
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"rolls": 1,
+		"entries": [
+		  {
+			"type": "empty",
+			"weight": 10
+		  },
+		  {
+			"type": "loot_table",
+			"weight": 1,
+			"value": "wc:rampage_creeper",
+			"functions": [
+			  {
+				"function": "set_count",
+				"count": 1
+			  }
+			]
+		  }
+		]
+	  }
+	]
+  }

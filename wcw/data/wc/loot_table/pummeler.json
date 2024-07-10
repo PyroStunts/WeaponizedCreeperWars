@@ -6,7 +6,7 @@
 		  {
 			"type": "item",
 			"weight": 1,
-			"name": "minecraft:silverfish_spawn_egg",
+			"name": "minecraft:blaze_spawn_egg",
 			"functions": [
 			  {
 				"function": "set_count",
@@ -15,22 +15,27 @@
 			  {
 				"function": "set_components",
 				"components": {
+				  "minecraft:can_place_on": {
+					"predicates": [
+						{
+						"blocks": "polished_blackstone_brick_stairs"
+						},
+						{
+						"blocks": "polished_blackstone_bricks"
+						}
+					]
+				  },
 				  "minecraft:entity_data": {
 					"id": "minecraft:creeper",
-					"NoAI": 1,
-					"Health": 100,
-					"ExplosionRadius": 6,
+					"Invulnerable": 1,
+					"Fuse": 100,
 					"Tags": [
-					  "rampage"
+					  "pummel_creeper"
 					],
-					"Attributes": [
+					"attributes": [
 					  {
-						"Name": "generic.follow_range",
-						"Base": 40
-					  },
-					  {
-						"Name": "generic.max_health",
-						"Base": 100
+						"id": "minecraft:generic.follow_range",
+						"base": 1
 					  }
 					]
 				  }
@@ -42,7 +47,7 @@
 				  {
 					"color": "green",
 					"italic": false,
-					"text": "Rampage Creeper"
+					"text": "Pummeler"
 				  }
 				]
 			  },
@@ -52,42 +57,27 @@
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "Use this to place a Rampage Creeper."
+					"text": "This creeper pummels the ground it"
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "You should move away from this Creeper"
+					"text": "stands on until there is nothing left."
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "immediately after you've placed it."
+					"text": "You should move away from this Creeper "
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "After 5 seconds it will continuously "
-				  },
-				  {
-					"color": "white",
-					"italic": false,
-					"text": "throw creeper grenades in all directions"
-				  },
-				  {
-					"color": "white",
-					"italic": false,
-					"text": "This Creeper can be detonated with a"
-				  },
-				  {
-					"color": "white",
-					"italic": false,
-					"text": "Detonator Arrow."
+					"text": "immediately after you've placed it. "
 				  },
 				  {
 					"color": "red",
 					"italic": false,
-					"text": "Explosion Radius 6."
+					"text": "Explosion Radius 4."
 				  }
 				],
 				"mode": "append"

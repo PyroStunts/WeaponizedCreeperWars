@@ -6,7 +6,7 @@
 		  {
 			"type": "item",
 			"weight": 1,
-			"name": "minecraft:wolf_spawn_egg",
+			"name": "minecraft:parrot_spawn_egg",
 			"functions": [
 			  {
 				"function": "set_count",
@@ -15,8 +15,18 @@
 			  {
 				"function": "set_components",
 				"components": {
+				  "minecraft:can_place_on": {
+					"predicates": [
+						{
+						"blocks": "polished_blackstone_brick_stairs"
+						},
+						{
+						"blocks": "polished_blackstone_bricks"
+						}
+					]
+				  },
 				  "minecraft:entity_data": {
-					"id": "minecraft:wolf",
+					"id": "minecraft:parrot",
 					"Silent": 1,
 					"active_effects": [
 					  {
@@ -35,7 +45,7 @@
 				  {
 					"color": "green",
 					"italic": false,
-					"text": "Reveal"
+					"text": "Launch Rocket"
 				  }
 				]
 			  },
@@ -45,12 +55,17 @@
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "Makes all players glow for 10 seconds"
+					"text": "Launch a Creeper Rocket."
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "when placed."
+					"text": "Flies upwards and explodes after 4 seconds."
+				  },
+				  {
+					"color": "red",
+					"italic": false,
+					"text": "Explosion Radius 5."
 				  }
 				],
 				"mode": "append"

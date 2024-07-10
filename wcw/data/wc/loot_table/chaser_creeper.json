@@ -6,7 +6,7 @@
 		  {
 			"type": "item",
 			"weight": 1,
-			"name": "minecraft:drowned_spawn_egg",
+			"name": "minecraft:tropical_fish_spawn_egg",
 			"functions": [
 			  {
 				"function": "set_count",
@@ -15,17 +15,36 @@
 			  {
 				"function": "set_components",
 				"components": {
+				"minecraft:can_place_on": {
+					"predicates": [
+						{
+						"blocks": "polished_blackstone_brick_stairs"
+						},
+						{
+						"blocks": "polished_blackstone_bricks"
+						}
+					]
+					},
 				  "minecraft:entity_data": {
 					"id": "minecraft:creeper",
-					"Fuse": 100,
-					"ignited": 0,
+					"NoAI": 1,
+					"Health": 100,
+					"ExplosionRadius": 6,
 					"Tags": [
-					  "creeper_bomb"
+					  "chaser"
 					],
-					"Attributes": [
+					"attributes": [
 					  {
-						"Name": "generic.follow_range",
-						"Base": 1
+						"id": "minecraft:generic.follow_range",
+						"base": 40
+					  },
+					  {
+						"id": "minecraft:generic.max_health",
+						"base": 100
+					  },
+					  {
+						"id": "minecraft:generic.movement_speed",
+						"base": 0.5
 					  }
 					]
 				  }
@@ -37,7 +56,7 @@
 				  {
 					"color": "green",
 					"italic": false,
-					"text": "Creeper Bomb"
+					"text": "Chaser Creeper"
 				  }
 				]
 			  },
@@ -47,7 +66,7 @@
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "Use this to place a Creeper Bomb."
+					"text": "Use this to place a Chaser Creeper."
 				  },
 				  {
 					"color": "white",
@@ -62,22 +81,17 @@
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "Once the Creeper is glowing blue, It will "
+					"text": "After 5 seconds it will chase a player "
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "explode immediately when a player goes near"
+					"text": "but it might chase you. It can move fast"
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "it. Try to place the creeper where your"
-				  },
-				  {
-					"color": "white",
-					"italic": false,
-					"text": "opponent won't see it. This Creeper can be"
+					"text": "and it's invincible.  This Creeper can be"
 				  },
 				  {
 					"color": "white",

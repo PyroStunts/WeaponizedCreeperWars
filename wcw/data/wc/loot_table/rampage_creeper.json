@@ -6,7 +6,7 @@
 		  {
 			"type": "item",
 			"weight": 1,
-			"name": "minecraft:tropical_fish_spawn_egg",
+			"name": "minecraft:silverfish_spawn_egg",
 			"functions": [
 			  {
 				"function": "set_count",
@@ -15,26 +15,32 @@
 			  {
 				"function": "set_components",
 				"components": {
+				  "minecraft:can_place_on": {
+					"predicates": [
+						{
+						"blocks": "polished_blackstone_brick_stairs"
+						},
+						{
+						"blocks": "polished_blackstone_bricks"
+						}
+					]
+				  },
 				  "minecraft:entity_data": {
 					"id": "minecraft:creeper",
 					"NoAI": 1,
 					"Health": 100,
 					"ExplosionRadius": 6,
 					"Tags": [
-					  "chaser"
+					  "rampage"
 					],
-					"Attributes": [
+					"attributes": [
 					  {
-						"Name": "generic.follow_range",
-						"Base": 40
+						"id": "minecraft:generic.follow_range",
+						"base": 40
 					  },
 					  {
-						"Name": "generic.max_health",
-						"Base": 100
-					  },
-					  {
-						"Name": "generic.movement_speed",
-						"Base": 0.5
+						"id": "minecraft:generic.max_health",
+						"base": 100
 					  }
 					]
 				  }
@@ -46,7 +52,7 @@
 				  {
 					"color": "green",
 					"italic": false,
-					"text": "Chaser Creeper"
+					"text": "Rampage Creeper"
 				  }
 				]
 			  },
@@ -56,7 +62,7 @@
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "Use this to place a Chaser Creeper."
+					"text": "Use this to place a Rampage Creeper."
 				  },
 				  {
 					"color": "white",
@@ -71,22 +77,22 @@
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "After 5 seconds it will chase a player "
+					"text": "After 5 seconds it will continuously "
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "but it might chase you. It can move fast"
+					"text": "throw creeper grenades in all directions"
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "and it's invincible.  This Creeper can be"
+					"text": "This Creeper can be detonated with a"
 				  },
 				  {
 					"color": "white",
 					"italic": false,
-					"text": "detonated with a Detonator Arrow."
+					"text": "Detonator Arrow."
 				  },
 				  {
 					"color": "red",

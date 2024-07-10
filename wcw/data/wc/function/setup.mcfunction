@@ -41,6 +41,11 @@ scoreboard objectives add PlayerCount dummy "Player Count"
 scoreboard players set $fake PlayerCount 0
 scoreboard players set $10 PlayerCount 10
 
+
+scoreboard objectives add CubeVoteCount dummy "Vote Count"
+scoreboard players set $fake CubeVoteCount 0
+
+
 scoreboard objectives add ApocalypseCount dummy "Apocalypse Counter"
 scoreboard players set $fake ApocalypseCount 0
 
@@ -49,6 +54,8 @@ scoreboard objectives add SurvivalMode trigger
 scoreboard objectives add ShowRules trigger
 scoreboard objectives add RulesAgree trigger
 scoreboard objectives add Apocalypse trigger
+scoreboard objectives add VoteCube trigger
+
 
 scoreboard objectives add Wins dummy "Game Wins"
 scoreboard objectives setdisplay below_name Wins
