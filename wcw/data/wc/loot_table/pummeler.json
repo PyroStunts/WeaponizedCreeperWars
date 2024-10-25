@@ -34,7 +34,7 @@
 					],
 					"attributes": [
 					  {
-						"id": "minecraft:generic.follow_range",
+						"id": "minecraft:follow_range",
 						"base": 1
 					  }
 					]

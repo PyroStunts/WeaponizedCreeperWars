@@ -35,15 +35,15 @@
 					],
 					"attributes": [
 					  {
-						"id": "minecraft:generic.follow_range",
+						"id": "minecraft:follow_range",
 						"base": 40
 					  },
 					  {
-						"id": "minecraft:generic.max_health",
+						"id": "minecraft:max_health",
 						"base": 100
 					  },
 					  {
-						"id": "minecraft:generic.movement_speed",
+						"id": "minecraft:movement_speed",
 						"base": 0.5
 					  }
 					]
