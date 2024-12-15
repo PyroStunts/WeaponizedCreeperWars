@@ -27,13 +27,13 @@
 				  },
 				  "minecraft:entity_data": {
 					"id": "minecraft:wolf",
-					"Silent": 1,
+					"Silent": true,
 					"active_effects": [
 					  {
 						"id": "minecraft:invisibility",
 						"amplifier": 1,
 						"duration": 200,
-						"show_particles": 0
+						"show_particles": false
 					  }
 					]
 				  }

@@ -27,7 +27,7 @@
 				  },
 				  "minecraft:entity_data": {
 					"id": "minecraft:creeper",
-					"Invulnerable": 1,
+					"Invulnerable": true,
 					"Fuse": 100,
 					"Tags": [
 					  "pummel_creeper"

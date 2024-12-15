@@ -27,7 +27,7 @@
 				  },
 				  "minecraft:entity_data": {
 					"id": "minecraft:creeper",
-					"NoAI": 1,
+					"NoAI": true,
 					"Health": 100,
 					"ExplosionRadius": 6,
 					"Tags": [
