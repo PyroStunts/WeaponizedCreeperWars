@@ -15,7 +15,6 @@
 			  {
 				"function": "set_components",
 				"components": {
-				  "minecraft:custom_model_data": 2,
 				  "minecraft:hide_additional_tooltip": {},
 				  "minecraft:potion_contents": {
 					"custom_color": 9631451,

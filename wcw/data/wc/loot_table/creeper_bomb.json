@@ -28,7 +28,7 @@
 				  "minecraft:entity_data": {
 					"id": "minecraft:creeper",
 					"Fuse": 100,
-					"ignited": 0,
+					"ignited": false,
 					"Tags": [
 					  "creeper_bomb"
 					],
