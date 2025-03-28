@@ -17,7 +17,7 @@ execute store result bossbar minecraft:next_supply value run scoreboard players 
 
 
 execute if score $fake StateCounter matches 18000 run gamerule doDaylightCycle true
-execute if score $fake StateCounter matches 24000 run tellraw @a [{"text":"The match has been running for over 20 minutes. The "},{"text":"/trigger Apocalypse","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger Apocalypse"}},{"text":" command is now available."}]
+execute if score $fake StateCounter matches 24000 run tellraw @a ["The match has been running for over 20 minutes. The ",{"click_event":{"action":"suggest_command","command":"/trigger Apocalypse"},"color":"green","text":"/trigger Apocalypse"}," command is now available."]
 
 
 #trigger apocalyse if not already started and game has run for over 20 mins
@@ -36,7 +36,7 @@ execute store result score $fake PlayerCount if entity @a[gamemode=survival]
 
 #counts players who want to play Cube Arena
 execute store result score $fake CubeVoteCount if entity @a[scores={VoteCube=1..},gamemode=survival]
-execute if entity @p[scores={VoteCube=1}] run tellraw @p[gamemode=survival,scores={VoteCube=0}] [{"color":"green","selector":"@p[scores={VoteCube=1}]"},{"color":"white","text":" wants to play Cube Arena . Click "},{"clickEvent":{"action":"run_command","value":"/trigger VoteCube"},"color":"red","text":"here "},{"color":"white","text":"to play. All surviving players must click this for it to begin."}]
+execute if entity @p[scores={VoteCube=1}] run tellraw @p[gamemode=survival,scores={VoteCube=0}] [{"color":"green","selector":"@p[scores={VoteCube=1}]"},{"color":"white","text":" wants to play Cube Arena . Click "},{"click_event":{"action":"run_command","command":"/trigger VoteCube"},"color":"red","text":"here "},{"color":"white","text":"to play. All surviving players must click this for it to begin."}]
 scoreboard players set @p[scores={VoteCube=1}] VoteCube 2
 
 #Start the Cube Arena because surviving PlayerCount is <= Players who voted to Play Cube Arena
@@ -47,4 +47,4 @@ execute if score $fake PlayerCount <= $fake CubeVoteCount run function wc:start_
 execute if score $fake PlayerCount matches 1 run function wc:game_over
 execute if score $fake PlayerCount matches 0 run scoreboard players set $fake GameState 1
 
-execute if score $fake StateCounter matches 100 run tellraw @a [{"color":"white","text":"Click to "},{"clickEvent":{"action":"run_command","value":"/trigger VoteCube"},"color":"red","hoverEvent":{"action":"show_text","value":[{"text":"All remaining player need to agree."}]},"text":"Play the Zero Build Cube Arena","underlined":true}]
+execute if score $fake StateCounter matches 100 run tellraw @a [{"color":"white","text":"Click to "},{"click_event":{"action":"run_command","command":"/trigger VoteCube"},"color":"red","hover_event":{"action":"show_text","value":[{"text":"All remaining player need to agree."}]},"text":"Play the Zero Build Cube Arena","underlined":true}]

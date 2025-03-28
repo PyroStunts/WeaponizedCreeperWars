@@ -19,7 +19,7 @@ execute store result bossbar minecraft:next_supply value run scoreboard players 
 
 
 execute if score $fake StateCounter matches 18000 run gamerule doDaylightCycle true
-execute if score $fake StateCounter matches 24000 run tellraw @a [{"text":"The match has been running for over 20 minutes. The "},{"text":"/trigger Apocalypse","color":"green","clickEvent":{"action":"suggest_command","value":"/trigger Apocalypse"}},{"text":" command is now available."}]
+execute if score $fake StateCounter matches 24000 run tellraw @a ["The match has been running for over 20 minutes. The ",{"click_event":{"action":"suggest_command","command":"/trigger Apocalypse"},"color":"green","text":"/trigger Apocalypse"}," command is now available."]
 
 
 #trigger apocalyse if not already started and game has run for over 20 mins
