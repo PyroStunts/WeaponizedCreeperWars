@@ -19,7 +19,17 @@
                   "title": "Mystery Clue 3",
                   "author": "PyroStunts",
                   "pages": [
-                    "[{\"text\":\"You will need to\n\"},{\"text\":\"DO THIS\",\"color\":\"dark_blue\",\"underlined\":true,\"hoverEvent\":{\"action\":\"show_text\",\"value\":[{\"text\":\"You're a survivor. You got this.\"}]},\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/trigger SurvivalMode\"}},{\"text\":\" when it's just you here.\"}]"
+                    [
+                      {"text":"You will need to\n"},
+                      {"text":"DO THIS",
+                      "color":"dark_blue",
+                      "underlined":true,
+                      "hover_event":{"action":"show_text",
+                      "value":[{"text":"You're a survivor. You got this."}]},
+                      "click_event":{"action":"run_command",
+                      "command":"/trigger SurvivalMode"}},
+                      " when it's just you here."
+                    ]
                   ]
                 }
               }

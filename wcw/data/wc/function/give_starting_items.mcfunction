@@ -1,4 +1,4 @@
-item replace entity @a armor.feet with chainmail_boots[unbreakable={},enchantments={levels:{"minecraft:blast_protection":6,"minecraft:protection":4}}] 1
+item replace entity @a armor.feet with chainmail_boots[unbreakable={},enchantments={"minecraft:blast_protection":6,"minecraft:protection":4}] 1
 item replace entity @a hotbar.1 with diamond_pickaxe[unbreakable={}] 1
 item replace entity @a hotbar.2 with bow[unbreakable={}] 1
 

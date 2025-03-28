@@ -15,7 +15,7 @@
 			  {
 				"function": "set_components",
 				"components": {
-				  "minecraft:hide_additional_tooltip": {},
+				  "minecraft:tooltip_display": {"hide_tooltip": true},
 				  "minecraft:potion_contents": {
 					"custom_color": 16495873,
 					"custom_effects": [

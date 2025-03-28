@@ -34,7 +34,7 @@ execute at @e[type=arrow,nbt={inGround:1b,item:{components:{"minecraft:potion_co
 #launch rocket
 execute at @e[type=parrot] run summon firework_rocket ~ ~ ~ {LifeTime:80,Passengers:[{id:"minecraft:creeper",NoGravity:1b,Invulnerable:1b,ExplosionRadius:5b,Fuse:80,ignited:1b,Tags:["rocket_creeper"],active_effects:[{id:"minecraft:levitation",amplifier:4b,duration:80}]}],FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"creeper",has_trail:true,colors:[I;720658,2738448],fade_colors:[I;2780716,1606932]}]}}}}
 
-execute as @e[type=creeper,tag=rocket_creeper] at @s unless block ~ ~2 ~ air run summon tnt ~ ~2 ~
+execute as @e[type=creeper,tag=rocket_creeper] at @s unless block ~ ~2 ~ air run summon tnt ~ ~2 ~ {fuse:0}
 tp @e[type=parrot] ~ -10 ~
 kill @e[type=parrot]
 
@@ -92,7 +92,7 @@ tag @e[type=creeper,tag=pummel_from_arrow] remove pummel_from_arrow
 #kill the pummeler so it doesn't last forever on the spawn platform. All others will die in the void
 kill @e[type=creeper,x=-200,y=0,z=-200,dx=400,dy=4,dz=400]
 scoreboard players add @e[type=creeper,tag=pummel_creeper,nbt={OnGround:1b}] StateCounter 1
-execute at @e[type=creeper,tag=pummel_creeper,scores={StateCounter=100..},nbt={OnGround:1b}] run summon tnt ~ ~-1 ~
+execute at @e[type=creeper,tag=pummel_creeper,scores={StateCounter=100..},nbt={OnGround:1b}] run summon tnt ~ ~-1 ~ {fuse:0}
 
 
 

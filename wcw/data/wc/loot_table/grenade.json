@@ -15,16 +15,14 @@
 			  {
 				"function": "set_components",
 				"components": {
-				  "minecraft:can_place_on": {
-					"predicates": [
-						{
-						"blocks": "polished_blackstone_brick_stairs"
-						},
-						{
-						"blocks": "polished_blackstone_bricks"
-						}
-					]
-				  },
+				  "minecraft:can_place_on": [
+					{
+					  "blocks": "polished_blackstone_brick_stairs"
+					},
+					{
+					  "blocks": "polished_blackstone_bricks"
+					}
+				  ],
 				  "minecraft:entity_data": {
 					"id": "minecraft:creeper",
 					"Invulnerable": 1,
