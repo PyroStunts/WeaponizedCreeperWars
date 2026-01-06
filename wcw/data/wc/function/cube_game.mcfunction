@@ -18,7 +18,7 @@ execute if score $fake SupplyDrop matches 800.. if score $fake ApocalypseCount m
 execute store result bossbar minecraft:next_supply value run scoreboard players get $fake SupplyDrop
 
 
-#execute if score $fake StateCounter matches 18000 run gamerule advance_time‌ true
+execute if score $fake StateCounter matches 18000 run gamerule advance_time true
 execute if score $fake StateCounter matches 24000 run tellraw @a ["The match has been running for over 20 minutes. The ",{"click_event":{"action":"suggest_command","command":"/trigger Apocalypse"},"color":"green","text":"/trigger Apocalypse"}," command is now available."]
 
 
