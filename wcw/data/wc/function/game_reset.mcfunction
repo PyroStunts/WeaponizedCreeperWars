@@ -1,5 +1,5 @@
 #This function is called after the winner_screen is finished showing
-gamerule doDaylightCycle false
+gamerule advance_time false
 time set noon
 clear @a[gamemode=!creative]
 function wc:make_rings

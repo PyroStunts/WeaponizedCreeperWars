@@ -62,7 +62,7 @@ scoreboard players set $fake ApocalypseCount 0
 
 
 time set noon
-gamerule doDaylightCycle false
+gamerule advance_time false
 
 #Main game mode starts
 scoreboard players set $fake GameState 4

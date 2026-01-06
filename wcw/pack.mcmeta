@@ -1,7 +1,8 @@
 {
    "pack": {
-	  "pack_format": 70,
-	  "description": "Weaponized Creeper Wars"
+	  "description": "Weaponized Creeper Wars",
+     "min_format": 94,
+     "max_format": 94
    }
 }
 	

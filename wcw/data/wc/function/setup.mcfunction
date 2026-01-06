@@ -19,12 +19,15 @@ bossbar set minecraft:next_supply color green
 bossbar set minecraft:next_supply max 800
 
 time set noon
-#gamerule doDaylightCycle true
-gamerule doWeatherCycle false
-gamerule commandBlockOutput false
-gamerule doImmediateRespawn true
-gamerule announceAdvancements false
-
+gamerule advance_time true
+gamerule allow_entering_nether_using_portals false
+gamerule spawn_mobs false
+gamerule pvp false
+gamerule advance_weather false
+gamerule command_block_output false
+gamerule immediate_respawn true
+gamerule show_advancement_messages false
+gamerule locator_bar true
 team add SameTeam
 team modify SameTeam friendlyFire false
 team modify SameTeam collisionRule never

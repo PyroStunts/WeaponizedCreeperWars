@@ -3,7 +3,7 @@ scoreboard players set @p[scores={SurvivalMode=1}] SurvivalMode 0
 function wc:make_platforms
 function wc:make_teleporters
 gamemode survival @p
-gamerule doDaylightCycle true
+gamerule advance_time true
 effect give @a minecraft:saturation 864000 1 true
 item replace entity @a hotbar.0 with diamond_axe[unbreakable={},custom_data={StartBase:"white"}] 1
 function wc:give_starting_items
